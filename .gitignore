@@ -1,0 +1,8 @@
+*.rfa
+cache/block.dat
+*.jpeg
+*.jpg
+LoadingProfile.txt
+*.samples
+*.log
+BF1942.pid
