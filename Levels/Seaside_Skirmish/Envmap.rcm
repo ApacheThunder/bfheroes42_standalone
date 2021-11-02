@@ -1,0 +1,8 @@
+[CubeMap]
+PositiveX = Levels\Seaside_Skirmish\Envmap\env_02.dds
+NegativeX = Levels\Seaside_Skirmish\Envmap\env_04.dds
+PositiveY = Levels\Seaside_Skirmish\Envmap\env_05.dds
+NegativeY = Levels\Seaside_Skirmish\Envmap\env_06.dds
+PositiveZ = Levels\Seaside_Skirmish\Envmap\env_01.dds
+NegativeZ = Levels\Seaside_Skirmish\Envmap\env_03.dds
+
