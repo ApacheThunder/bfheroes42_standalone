@@ -1,0 +1,8 @@
+[CubeMap]
+PositiveX = Levels\Lunar_Landing_Day2\Envmap\env_01.dds
+NegativeX = Levels\Lunar_Landing_Day2\Envmap\env_02.dds
+PositiveY = Levels\Lunar_Landing_Day2\Envmap\env_03.dds
+NegativeY = Levels\Lunar_Landing_Day2\Envmap\env_04.dds
+PositiveZ = Levels\Lunar_Landing_Day2\Envmap\env_05.dds
+NegativeZ = Levels\Lunar_Landing_Day2\Envmap\env_06.dds
+
