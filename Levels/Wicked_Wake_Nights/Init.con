@@ -1,0 +1,49 @@
+rem ************************************************************
+rem *** Converted from Battlefield Heroes by Apache Thunder. ***
+rem ************************************************************
+ShaderManager.setTextureParam envmap Levels\Wicked_Wake_Nights\Envmap.rcm
+
+textureManager.alternativePath Levels/Wicked_Wake_Nights/Texture
+textureManager.addAlternativePath Texture/Night
+
+
+Game.setViewDistance 300
+Game.spawnPlayers 1
+
+renderer.vertexFogEnable 1
+renderer.fogColorVec 0.043/0.121/0.344
+renderer.globalLodPercent 1
+renderer.globalSkyColor 0.1/0.1/0.1
+renderer.animatedMeshSunFactor 1
+renderer.animatedMeshSkyColor 0.09/0.29/0.39
+renderer.skyColor 0/0.049/0.219
+renderer.sunColor 0.312/0.419/0.65
+renderer.sunSpecColor 0.367/0.469/0.699
+
+renderer.fogStart 80
+renderer.fogEnd 250
+
+Game.damageForBeingOutSideWorld 300
+
+game.setBeforeSpawnCameraPosition 1 627.741/65.59/353.098
+game.setBeforeSpawnCameraPosition 2 627.741/65.59/353.098
+
+run Init/Terrain
+run Init/Water
+run Init/SkyAndSun
+run Sounds
+
+
+game.setTeamSkin 1 german_male_soldier_doom
+game.setKit 1 0 NA_Commando_Kit
+game.setKit 1 1 NA_Gunner_Kit_TNT
+game.setKit 1 2 NA_Gunner_Kit
+game.setKit 1 3 NA_Soldier_Kit
+game.setKit 1 4 NA_Soldier_Kit_TNT
+
+game.setTeamSkin 2 british_male_soldier_doom
+game.setKit 2 0 RA_Commando_Kit
+game.setKit 2 1 RA_Gunner_Kit_TNT
+game.setKit 2 2 RA_Gunner_Kit
+game.setKit 2 3 RA_Soldier_Kit
+game.setKit 2 4 RA_Soldier_Kit_TNT

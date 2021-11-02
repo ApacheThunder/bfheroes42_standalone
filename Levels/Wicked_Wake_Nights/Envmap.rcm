@@ -1,0 +1,8 @@
+[CubeMap]
+PositiveX = Levels\Wicked_Wake_Nights\Envmap\env_01.dds
+NegativeX = Levels\Wicked_Wake_Nights\Envmap\env_02.dds
+PositiveY = Levels\Wicked_Wake_Nights\Envmap\env_03.dds
+NegativeY = Levels\Wicked_Wake_Nights\Envmap\env_04.dds
+PositiveZ = Levels\Wicked_Wake_Nights\Envmap\env_05.dds
+NegativeZ = Levels\Wicked_Wake_Nights\Envmap\env_06.dds
+

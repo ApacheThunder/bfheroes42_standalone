@@ -1,0 +1,48 @@
+ObjectTemplate.active em_nationalskull
+ObjectTemplate.lodDistance 100
+
+ObjectTemplate.active em_national_skeleton_torso
+ObjectTemplate.lodDistance 100
+
+ObjectTemplate.active em_national_skeleton_arm_l
+ObjectTemplate.lodDistance 80
+
+ObjectTemplate.active em_national_skeleton_arm_r
+ObjectTemplate.lodDistance 80
+
+ObjectTemplate.active em_national_skeleton_leg_l
+ObjectTemplate.lodDistance 80
+
+ObjectTemplate.active em_national_skeleton_leg_r
+ObjectTemplate.lodDistance 80
+
+ObjectTemplate.active em_national_skeleton_pelvis
+ObjectTemplate.lodDistance 75
+
+ObjectTemplate.active fx_nationalskull
+ObjectTemplate.timeToLiveAfterDeath 8
+ObjectTemplate.timeToStartFadeAfterDeath 7
+
+ObjectTemplate.active fx_national_skeleton_torso
+ObjectTemplate.timeToLiveAfterDeath 8
+ObjectTemplate.timeToStartFadeAfterDeath 7
+
+ObjectTemplate.active fx_national_skeleton_arm_l
+ObjectTemplate.timeToLiveAfterDeath 7
+ObjectTemplate.timeToStartFadeAfterDeath 6
+
+ObjectTemplate.active fx_national_skeleton_arm_r
+ObjectTemplate.timeToLiveAfterDeath 7
+ObjectTemplate.timeToStartFadeAfterDeath 6
+
+ObjectTemplate.active fx_national_skeleton_leg_l
+ObjectTemplate.timeToLiveAfterDeath 7
+ObjectTemplate.timeToStartFadeAfterDeath 6
+
+ObjectTemplate.active fx_national_skeleton_leg_r
+ObjectTemplate.timeToLiveAfterDeath 7
+ObjectTemplate.timeToStartFadeAfterDeath 6
+
+ObjectTemplate.active fx_national_skeleton_pelvis
+ObjectTemplate.timeToLiveAfterDeath 9
+ObjectTemplate.timeToStartFadeAfterDeath 8
