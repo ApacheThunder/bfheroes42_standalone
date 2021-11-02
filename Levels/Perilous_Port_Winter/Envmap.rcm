@@ -1,0 +1,8 @@
+[CubeMap]
+PositiveX = Levels\Perilous_Port_Winter\Envmap\env_01.dds
+NegativeX = Levels\Perilous_Port_Winter\Envmap\env_02.dds
+PositiveY = Levels\Perilous_Port_Winter\Envmap\env_03.dds
+NegativeY = Levels\Perilous_Port_Winter\Envmap\env_04.dds
+PositiveZ = Levels\Perilous_Port_Winter\Envmap\env_05.dds
+NegativeZ = Levels\Perilous_Port_Winter\Envmap\env_06.dds
+

@@ -1,0 +1,8 @@
+[CubeMap]
+PositiveX = Levels\Riverside_Rush_Nights\Envmap\env_02.dds
+NegativeX = Levels\Riverside_Rush_Nights\Envmap\env_04.dds
+PositiveY = Levels\Riverside_Rush_Nights\Envmap\env_01.dds
+NegativeY = Levels\Riverside_Rush_Nights\Envmap\env_03.dds
+PositiveZ = Levels\Riverside_Rush_Nights\Envmap\env_06.dds
+NegativeZ = Levels\Riverside_Rush_Nights\Envmap\env_05.dds
+
