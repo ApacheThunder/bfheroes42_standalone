@@ -1,0 +1,8 @@
+[CubeMap]
+PositiveX = Levels\El_Alamein\Envmap\env_Elala_04.dds
+NegativeX = Levels\El_Alamein\Envmap\env_Elala_02.dds
+PositiveY = Levels\El_Alamein\Envmap\env_Elala_05.dds
+NegativeY = Levels\El_Alamein\Envmap\env_Elala_06.dds
+PositiveZ = Levels\El_Alamein\Envmap\env_Elala_03.dds
+NegativeZ = Levels\El_Alamein\Envmap\env_Elala_01.dds
+
