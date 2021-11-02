@@ -1,0 +1,8 @@
+[CubeMap]
+PositiveX = Levels/Cape_of_Aegean/Envmap/env_LF.dds
+NegativeX = Levels/Cape_of_Aegean/Envmap/env_RT.dds
+PositiveY = Levels/Cape_of_Aegean/Envmap/env_UP.dds
+NegativeY = Levels/Cape_of_Aegean/Envmap/env_DN.dds
+PositiveZ = Levels/Cape_of_Aegean/Envmap/env_FR.dds
+NegativeZ = Levels/Cape_of_Aegean/Envmap/env_BK.dds
+

@@ -1,0 +1,8 @@
+[CubeMap]
+PositiveX = Levels/City_of_Aegean/Envmap/env_LF.dds
+NegativeX = Levels/City_of_Aegean/Envmap/env_RT.dds
+PositiveY = Levels/City_of_Aegean/Envmap/env_UP.dds
+NegativeY = Levels/City_of_Aegean/Envmap/env_DN.dds
+PositiveZ = Levels/City_of_Aegean/Envmap/env_FR.dds
+NegativeZ = Levels/City_of_Aegean/Envmap/env_BK.dds
+

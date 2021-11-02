@@ -1,0 +1,29 @@
+GeometryTemplate.create patchTerrain patchGeometry
+GeometryTemplate.file Levels\Coastal_Clash\Heightmap
+GeometryTemplate.materialMap Levels\Coastal_Clash\Materialmap
+GeometryTemplate.materialSize 512
+GeometryTemplate.targetTriCount 1024
+GeometryTemplate.worldSize 1024
+GeometryTemplate.yScale 0.64
+GeometryTemplate.texBaseName Levels\Coastal_Clash_Doomsday\Textures\Tx
+GeometryTemplate.texOffsetX 0
+GeometryTemplate.texOffsetY 0
+GeometryTemplate.detailTexName Levels\Coastal_Clash_Doomsday\Textures\terrainAmbient
+GeometryTemplate.waterLevel 8
+GeometryTemplate.seaFloorLevel 0
+GeometryTemplate.lodDistance 512
+
+ObjectTemplate.create SimpleObject terrainObject
+ObjectTemplate.geometry patchGeometry
+ObjectTemplate.createNotInGrid 1
+
+Object.create terrainObject
+Object.name track
+
+Console.worldSize 1024
+
+Terrain.ShadowAmbient 106/131/169
+Terrain.ShadowBorderFadeTime 0.075
+Terrain.ShadowSamplingCullY 10
+
+shadow.shadowColor 0.199/0.320/0.559

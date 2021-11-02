@@ -1,0 +1,23 @@
+console.useRelativePaths 0
+TextureManager.mipmaps 0
+
+GeometryTemplate.create StandardMesh SkyBox
+GeometryTemplate.file skydome_bf2_m1
+
+Sky.initSky
+
+run Common/LensFlares/Lenz2
+
+Object.create TSun2
+Object.isSaveable 1
+Object.isInGrid 1
+Object.name TSun2
+
+Sky.setSun TSun2
+sky.changeOfsSkyHeight 51
+sky.setRotAngle -142.94
+sky.sunLightDirectionVec 0.558856/0.528917/0.638692
+
+TextureManager.mipmaps 1
+
+console.useRelativePaths 1

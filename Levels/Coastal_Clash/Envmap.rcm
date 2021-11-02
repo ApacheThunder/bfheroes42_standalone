@@ -1,0 +1,8 @@
+[CubeMap]
+PositiveX = Levels\Coastal_Clash\Envmap\env_Coastal_Clash_04.dds
+NegativeX = Levels\Coastal_Clash\Envmap\env_Coastal_Clash_02.dds
+PositiveY = Levels\Coastal_Clash\Envmap\env_Coastal_Clash_05.dds
+NegativeY = Levels\Coastal_Clash\Envmap\env_Coastal_Clash_06.dds
+PositiveZ = Levels\Coastal_Clash\Envmap\env_Coastal_Clash_03.dds
+NegativeZ = Levels\Coastal_Clash\Envmap\env_Coastal_Clash_01.dds
+
