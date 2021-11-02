@@ -1,0 +1,8 @@
+[CubeMap]
+PositiveX = Texture\env_RT.dds
+NegativeX = Texture\env_LF.dds
+PositiveY = Texture\env_UP.dds
+NegativeY = Texture\env_DN.dds
+PositiveZ = Texture\env_FR.dds
+NegativeZ = Texture\env_BK.dds
+
