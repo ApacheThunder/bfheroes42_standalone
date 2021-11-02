@@ -1,0 +1,20 @@
+rem *** pathfinding debug mode
+rem game.aiPathfindingDebuggingActive 1
+
+rem *** Set number of maps ***
+rem ai.setNSearchMaps 2 *** DEPRICATED ***
+rem ai.setNSearchTypes 2 *** DEPRICATED ***
+
+rem *** Setup map parameters ***
+rem *** searchMap name/waterHeight/waterDepth/maxSlope/brush/lowClipLevel/hiClipLevel/considerAITypes
+
+rem *** Tank ***
+ai.addSearchMap Tank0 65 5 30 3.0 0.3 2.5 0
+ai.addSearchType Tank 0 0
+
+rem *** Infantry ***
+ai.addSearchMap guada1 65 5 30 1.0 0.4 2.0 1
+ai.addSearchType Infantery 1 0
+
+rem *** Load maps ***
+ai.loadMaps

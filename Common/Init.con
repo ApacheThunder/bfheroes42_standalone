@@ -1,0 +1,16 @@
+Console.setAccess c_fullAccess
+
+run Init/Menu
+run Init/Settings
+
+run globalSpawnGroups
+
+console.showFps 0
+
+game.setMinorVictory 0.40
+game.setMajorVictory 0.80
+
+rem ShaderManager.lensFlareEnable 1
+
+rem *** Default Envmap ***
+ShaderManager.setTextureParam envmap Texture\envmap.rcm

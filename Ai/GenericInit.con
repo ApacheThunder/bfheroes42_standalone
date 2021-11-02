@@ -1,0 +1,17 @@
+rem *** General AI setup ***
+ai.init 2
+ai.setMaxNBots 8
+
+rem *** Behaviours ***
+run ai/Behaviours.con
+
+rem *** Maps ***
+run ai/GenericPathFinding.con
+
+rem *** SAI ***
+ai.saiMapXDimension 32
+ai.saiMapYDimension 32
+ai.saiEnable 0
+ai.createSAI
+
+game.showAIStats 0

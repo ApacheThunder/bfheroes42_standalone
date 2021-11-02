@@ -1,0 +1,13 @@
+console.useRelativePaths 0
+
+run ai/soldier 1 1
+run ai/soldier 1 2
+
+run ai/spawnTankPos 2 5 1860/100/2060 
+
+rem run ai/planePos 1 12 1600/1000/2100
+
+console.useRelativePaths 1
+
+
+rem EOF

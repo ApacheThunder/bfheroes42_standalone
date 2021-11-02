@@ -1,0 +1,11 @@
+var v_name
+var v_side
+
+rem *** Alias arguments ***
+echo v_arg2 -> v_name
+echo v_arg1 -> v_side
+
+
+rem *** Create Bot and attach to object ***
+game.createUnspawnedAIPlayer v_name v_side
+ai.addUnspawnedBot v_name v_side default StandardWeights

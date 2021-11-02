@@ -1,0 +1,5 @@
+rem ** Player **
+run Profiles/Player/Controls/Common.con
+run Profiles/Player/Controls/Infantry.con
+run Profiles/Player/Controls/Land.con
+run Profiles/Player/Controls/Air.con

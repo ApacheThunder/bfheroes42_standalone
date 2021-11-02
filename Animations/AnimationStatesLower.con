@@ -1,0 +1,173 @@
+rem ***************************
+rem *** Lower body states ***
+rem ***************************
+
+AnimationStateMachine.createState Lb_Stand
+AnimationStateMachine.setSoundTrigger c_SstStand
+AnimationStateMachine.addAnimation Animations/StandWalkRun/LowerBody/3PStandLower.baf 0.8 1
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1  Lb_RunForward
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5  Lb_RunBackward
+AnimationStateMachine.addTransitionOne c_PIMouseLookX  -1 -0.01 Lb_TurnLeft
+AnimationStateMachine.addTransitionOne c_PIMouseLookX  0.01 1 Lb_TurnRight
+AnimationStateMachine.addTransitionOne c_PIYaw  -1 -0.01 Lb_StrafeLeft
+AnimationStateMachine.addTransitionOne c_PIYaw  0.01 1 Lb_StrafeRight
+AnimationStateMachine.addTransitionOne c_PIAction 0.5 1 Lb_StandJump
+AnimationStateMachine.addIdle Lb_StandRelax
+AnimationStateMachine.returnToState Lb_Stand
+AnimationStateMachine.setSpeed 1.0 1.0 1.0
+AnimationStateMachine.setMorphFactor 2.0
+
+AnimationStateMachine.createState Lb_StandRelax
+AnimationStateMachine.setSoundTrigger c_SstStand
+AnimationStateMachine.addAnimation Animations/StandWalkRun/LowerBody/3PStandRelaxLower.baf 0.8 1
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1  Lb_RunForward
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5  Lb_RunBackward
+AnimationStateMachine.addTransitionOne c_PIMouseLookX  -1 -0.01 Lb_TurnLeft
+AnimationStateMachine.addTransitionOne c_PIMouseLookX  0.01 1 Lb_TurnRight
+AnimationStateMachine.addTransitionOne c_PIYaw  -1 -0.01 Lb_StrafeLeft
+AnimationStateMachine.addTransitionOne c_PIYaw  0.01 1 Lb_StrafeRight
+AnimationStateMachine.addTransitionOne c_PIAction 0.5 1 Lb_StandJump
+AnimationStateMachine.returnToState Lb_StandRelax
+AnimationStateMachine.setSpeed 1.0 1.0 1.0
+AnimationStateMachine.setMorphFactor 2.0
+
+
+rem --- Walk ---
+AnimationStateMachine.createState Lb_WalkForward
+AnimationStateMachine.setSoundTrigger c_SstWalk
+AnimationStateMachine.addAnimation Animations/StandWalkRun/LowerBody/3PWalkLower.baf 0.7 1
+AnimationStateMachine.addTransitionOne c_PIAction 0.5 1 Lb_StandJump
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Lb_WalkForward
+AnimationStateMachine.addToLatestTransition c_PIWalk 0.5 1
+AnimationStateMachine.addTransitionOne c_PIThrottle -9999 -0.5 Lb_WalkBackward
+AnimationStateMachine.addToLatestTransition c_PIWalk 0.5 1
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1  Lb_RunForward
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5  Lb_RunBackward
+AnimationStateMachine.addTransitionOne c_PIYaw 0.5 1 Lb_WalkForward
+AnimationStateMachine.addToLatestTransition c_PIWalk 0.5 1
+AnimationStateMachine.addTransitionOne c_PIYaw -1 -0.5 Lb_WalkForward
+AnimationStateMachine.addToLatestTransition c_PIWalk 0.5 1
+AnimationStateMachine.returnToState Lb_Stand
+AnimationStateMachine.setSpeed 1.0 1.0 1.0
+AnimationStateMachine.setMorphFactor 2.0
+AnimationStateMachine.setCameraShakeYaw 0 0.10 3.0
+AnimationStateMachine.setCameraShakeUpDown 0 0.06 7
+AnimationStateMachine.setCameraShakeLeftRight 0 0.01 0.5
+AnimationStateMachine.setCameraShakeFadeIn 0 0.6
+
+AnimationStateMachine.createState Lb_WalkBackward
+AnimationStateMachine.setSoundTrigger c_SstWalk
+AnimationStateMachine.addAnimation Animations/StandWalkRun/LowerBody/3PWalkLower.baf -0.7 1
+AnimationStateMachine.addTransitionOne c_PIAction 0.5 1 Lb_StandJump
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Lb_WalkForward
+AnimationStateMachine.addToLatestTransition c_PIWalk 0.5 1
+AnimationStateMachine.addTransitionOne c_PIThrottle -9999 -0.5 Lb_WalkBackward
+AnimationStateMachine.addToLatestTransition c_PIWalk 0.5 1
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1  Lb_RunForward
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5  Lb_RunBackward
+AnimationStateMachine.returnToState Lb_Stand
+AnimationStateMachine.setSpeed 1.0 1.0 1.0
+AnimationStateMachine.setMorphFactor 2.0
+AnimationStateMachine.setCameraShakeYaw 0 0.10 3.0
+AnimationStateMachine.setCameraShakeUpDown 0 0.06 7
+AnimationStateMachine.setCameraShakeLeftRight 0 0.01 0.5
+AnimationStateMachine.setCameraShakeFadeIn 0 0.6
+
+
+rem --- Run ---
+AnimationStateMachine.createState Lb_RunForward
+AnimationStateMachine.setSoundTrigger c_SstRun
+AnimationStateMachine.addAnimation Animations/StandWalkRun/LowerBody/3PRunLower.baf 1.6 1
+AnimationStateMachine.addTransitionOne c_PIAction 0.5 1  Lb_RunJump
+AnimationStateMachine.addTransitionOne c_PIWalk 0.5 1 Lb_WalkForward
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Lb_RunForward
+AnimationStateMachine.returnToState Lb_Stand
+AnimationStateMachine.setSpeed 1.0 1.0 1.0
+AnimationStateMachine.setMorphFactor 2.0
+AnimationStateMachine.setCameraShakeYaw 0 0.15 8.0
+AnimationStateMachine.setCameraShakeUpDown 0 0.08 15
+AnimationStateMachine.setCameraShakeLeftRight 0 0.02 5
+AnimationStateMachine.setCameraShakeFadeIn 0 0.6
+
+AnimationStateMachine.createState Lb_RunBackward
+AnimationStateMachine.setSoundTrigger c_SstRun
+AnimationStateMachine.addAnimation Animations/StandWalkRun/LowerBody/3PRunBackLower.baf -1.6 1
+AnimationStateMachine.addTransitionOne c_PIAction 0.5 1  Lb_RunJumpBackward
+AnimationStateMachine.addTransitionOne c_PIWalk 0.5 1 Lb_WalkBackward
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5  Lb_RunBackward
+AnimationStateMachine.returnToState Lb_Stand
+AnimationStateMachine.setSpeed 1.0 1.0 1.0
+AnimationStateMachine.setMorphFactor 2.0
+AnimationStateMachine.setCameraShakeYaw 0 0.15 8.0
+AnimationStateMachine.setCameraShakeUpDown 0 0.08 15
+AnimationStateMachine.setCameraShakeLeftRight 0 0.02 5
+AnimationStateMachine.setCameraShakeFadeIn 0 0.6
+
+rem DO NOT USE STOP ANIMATIONS!
+rem AnimationStateMachine.createState Lb_RunStop
+rem AnimationStateMachine.addAnimation Animations/StandWalkRun/LowerBody/3PRunStopLower.baf 2 0
+rem AnimationStateMachine.addTransitionWhenDone Lb_Stand
+rem AnimationStateMachine.setMorphFactor 5.0
+
+
+rem --- Turn ---
+AnimationStateMachine.createState Lb_TurnLeft
+AnimationStateMachine.addAnimation Animations/StandWalkRun/LowerBody/3PTurnLower.baf 2 1
+AnimationStateMachine.addTransitionOne c_PIAction 0.5 1 Lb_StandJump
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1  Lb_RunForward
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5  Lb_RunBackward
+AnimationStateMachine.addTransitionOne c_PIYaw  -1 -0.01 Lb_StrafeLeft
+AnimationStateMachine.addTransitionOne c_PIYaw  0.01 1 Lb_StrafeRight
+AnimationStateMachine.addTransitionOne c_PIMouseLookX  -1 -0.01 Lb_TurnLeft
+AnimationStateMachine.returnToState Lb_Stand
+AnimationStateMachine.setSpeed 1.0 1.0 1.0
+
+AnimationStateMachine.createState Lb_TurnRight
+AnimationStateMachine.addAnimation Animations/StandWalkRun/LowerBody/3PTurnLower.baf -2 1
+AnimationStateMachine.addTransitionOne c_PIAction 0.5 1 Lb_StandJump
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1  Lb_RunForward
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5  Lb_RunBackward
+AnimationStateMachine.addTransitionOne c_PIYaw  -1 -0.01 Lb_StrafeLeft
+AnimationStateMachine.addTransitionOne c_PIYaw  0.01 1 Lb_StrafeRight
+AnimationStateMachine.addTransitionOne c_PIMouseLookX  0.01 1 Lb_TurnRight
+AnimationStateMachine.returnToState Lb_Stand
+AnimationStateMachine.setSpeed 1.0 1.0 1.0
+
+rem --- Strafe ---
+AnimationStateMachine.createState Lb_StrafeLeft
+AnimationStateMachine.setSoundTrigger c_SstRun
+AnimationStateMachine.addAnimation Animations/StandWalkRun/LowerBody/3PRunLower.baf 1.6 1
+AnimationStateMachine.addTransitionOne c_PIAction 0.5 1  Lb_RunJump
+AnimationStateMachine.addTransitionOne c_PIYaw -1 -0.01 Lb_WalkForward
+AnimationStateMachine.addToLatestTransition c_PIWalk 0.5 1
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1  Lb_RunForward
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5  Lb_RunBackward
+AnimationStateMachine.addTransitionOne c_PIYaw -1 -0.01 Lb_StrafeLeft
+AnimationStateMachine.addTransitionOne c_PIMouseLookX  -1 -0.01 Lb_TurnLeft
+AnimationStateMachine.addTransitionOne c_PIMouseLookX  0.01 1 Lb_TurnRight
+AnimationStateMachine.returnToState Lb_Stand
+AnimationStateMachine.setSpeed 1.0 1.0 1.0
+AnimationStateMachine.setMorphFactor 2.0
+AnimationStateMachine.setCameraShakeYaw 0 0.15 8.0
+AnimationStateMachine.setCameraShakeUpDown 0 0.08 15
+AnimationStateMachine.setCameraShakeLeftRight 0 0.02 5
+AnimationStateMachine.setCameraShakeFadeIn 0 0.6
+
+AnimationStateMachine.createState Lb_StrafeRight
+AnimationStateMachine.setSoundTrigger c_SstRun
+AnimationStateMachine.addAnimation Animations/StandWalkRun/LowerBody/3PRunLower.baf 1.6 1
+AnimationStateMachine.addTransitionOne c_PIAction 0.5 1  Lb_RunJump
+AnimationStateMachine.addTransitionOne c_PIYaw 0.5 1 Lb_WalkForward
+AnimationStateMachine.addToLatestTransition c_PIWalk 0.5 1
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1  Lb_RunForward
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5  Lb_RunBackward
+AnimationStateMachine.addTransitionOne c_PIYaw  0.01 1 Lb_StrafeRight
+AnimationStateMachine.addTransitionOne c_PIMouseLookX  -1 -0.01 Lb_TurnLeft
+AnimationStateMachine.addTransitionOne c_PIMouseLookX  0.01 1 Lb_TurnRight
+AnimationStateMachine.returnToState Lb_Stand
+AnimationStateMachine.setSpeed 1.0 1.0 1.0
+AnimationStateMachine.setMorphFactor 2.0
+AnimationStateMachine.setCameraShakeYaw 0 0.15 8.0
+AnimationStateMachine.setCameraShakeUpDown 0 0.08 15
+AnimationStateMachine.setCameraShakeLeftRight 0 0.02 5
+AnimationStateMachine.setCameraShakeFadeIn 0 0.6

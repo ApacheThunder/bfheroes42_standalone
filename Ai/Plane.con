@@ -1,0 +1,20 @@
+Var v_planePos
+
+rem *** Create Plane ***
+game.spawnObject mustang 
+object.name v_arg3
+
+rem *** Create Bot and attach to plane ***
+game.createAIPlayer v_arg3 v_arg2 v_arg1
+ai.addBot v_arg3 v_arg2 default PlaneWeights v_arg3
+
+beginrem
+rem *** Give patrol route to bot ***
+Var v_planePos2
+Utils.mathExprV3 v_planePos + 50/100/50 -> v_planePos2
+rem ai.botSetWaypoints_Patrol3d v_botId 1.0 2 v_planePos v_planePos2
+ai.botSetWaypoints_Patrol3d v_botId 1.0 1 v_planePos2 v_planePos
+
+rem *** Give MoveTo order to bot ***
+ai.botGiveOrder v_botId MoveTo UnitWeights
+endrem

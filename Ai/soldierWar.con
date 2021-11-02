@@ -1,0 +1,24 @@
+console.useRelativePaths 0
+
+run ai/soldier Assault 1 1a
+run ai/soldier Assault 1 1b
+run ai/soldier Assault 1 1c
+run ai/soldier Assault 1 1d
+run ai/soldier Assault 1 1e
+run ai/soldier Assault 1 1f
+run ai/soldier Assault 1 1g
+run ai/soldier Assault 1 1h
+run ai/soldier Assault 2 2a
+run ai/soldier Assault 2 2b
+run ai/soldier Assault 2 2c
+run ai/soldier Assault 2 2d
+run ai/soldier Assault 2 2e
+run ai/soldier Assault 2 2f
+run ai/soldier Assault 2 2g
+run ai/soldier Assault 2 2h
+
+console.useRelativePaths 1
+
+game.showAIStats 0
+
+rem EOF

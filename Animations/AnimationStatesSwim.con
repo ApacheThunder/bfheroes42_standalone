@@ -1,0 +1,87 @@
+rem Swim
+rem ***				 ------- LOWER BODY ------
+rem
+
+rem --- Swim ----
+AnimationStateMachine.createState Lb_StartSwim
+AnimationStateMachine.setSoundTrigger c_SstToSwim
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PSwimStartLower.baf 3.6 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone Lb_SwimForward
+AnimationStateMachine.setSpeed 1 1 1
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.setFlag c_AsmHideWeapon
+AnimationStateMachine.setFlag c_AsmIsSwimming
+
+AnimationStateMachine.createState Lb_Floating
+AnimationStateMachine.setSoundTrigger c_SstSwimStand
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PSwimFloatingLower.baf 0.4 c_AsmLooping
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1  Lb_SwimForward
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5  Lb_SwimBackward
+AnimationStateMachine.returnToState Lb_Floating
+AnimationStateMachine.setSpeed 1 1 1
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.setFlag c_AsmHideWeapon
+AnimationStateMachine.setFlag c_AsmIsSwimming
+
+AnimationStateMachine.createState Lb_SwimForward
+AnimationStateMachine.setSoundTrigger c_SstSwim
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PSwimForwardLower.baf 1 c_AsmLooping
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1  Lb_SwimForward
+AnimationStateMachine.returnToState Lb_Floating
+AnimationStateMachine.setSpeed 1 1 1
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.setFlag c_AsmHideWeapon
+AnimationStateMachine.setFlag c_AsmIsSwimming
+
+AnimationStateMachine.createState Lb_SwimBackward
+AnimationStateMachine.setSoundTrigger c_SstSwim
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PSwimBackwardLower.baf 1 c_AsmLooping
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5  Lb_SwimBackward
+AnimationStateMachine.returnToState Lb_Floating
+AnimationStateMachine.setSpeed 1 1 1
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.setFlag c_AsmHideWeapon
+AnimationStateMachine.setFlag c_AsmIsSwimming
+
+AnimationStateMachine.createState Lb_EndSwim
+AnimationStateMachine.setSoundTrigger c_SstFromSwim
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PSwimStartLower.baf -3.2 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone Lb_Stand
+AnimationStateMachine.setSpeed 1 1 1
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.setFlag c_AsmHideWeapon
+AnimationStateMachine.setFlag c_AsmIsSwimming
+
+rem
+rem ***				 ------- UPPER BODY ------
+rem
+
+rem --- Swim ----
+AnimationStateMachine.createState Ub_StartSwim
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PSwimStartUpper.baf 3.6 0
+AnimationStateMachine.addTransitionWhenDone Ub_SwimForward
+AnimationStateMachine.setMorphFactor 4.0
+
+AnimationStateMachine.createState Ub_Floating
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PSwimFloatingUpper.baf 0.4 1
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1  Ub_SwimForward
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5  Ub_SwimBackward
+AnimationStateMachine.returnToState Ub_Floating
+AnimationStateMachine.setMorphFactor 4.0
+
+AnimationStateMachine.createState Ub_SwimForward
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PSwimForwardUpper.baf 1 1
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1  Ub_SwimForward
+AnimationStateMachine.returnToState Ub_Floating
+AnimationStateMachine.setMorphFactor 4.0
+
+AnimationStateMachine.createState Ub_SwimBackward
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PSwimBackwardUpper.baf 1 1
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5  Ub_SwimBackward
+AnimationStateMachine.returnToState Ub_Floating
+AnimationStateMachine.setMorphFactor 4.0
+
+AnimationStateMachine.createState Ub_EndSwim
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PSwimStartUpper.baf -3.2 0
+AnimationStateMachine.addTransitionWhenDone Ub_Stand
+AnimationStateMachine.setMorphFactor 1.0

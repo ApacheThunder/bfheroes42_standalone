@@ -1,0 +1,280 @@
+rem
+rem *** Lie states ***
+rem
+
+rem
+rem **** Transitions from stand/crouch/lie
+rem  
+
+AnimationStateMachine.createState Ub_CrouchToLie
+AnimationStateMachine.addTransitionItem	
+AnimationStateMachine.setFlag c_AsmIsLying
+AnimationStateMachine.returnToState Ub_Lie
+
+AnimationStateMachine.createState Ub_LieToCrouch
+AnimationStateMachine.addTransitionItem
+AnimationStateMachine.returnToState Ub_Crouch
+
+AnimationStateMachine.createState Ub_LieToStand
+AnimationStateMachine.addTransitionItem	
+AnimationStateMachine.setFlag c_AsmIsLying
+
+AnimationStateMachine.createState Lb_CrouchToLie
+AnimationStateMachine.setSoundTrigger c_SstToCrawl
+AnimationStateMachine.addAnimation Animations/Lie/LowerBody/3PCrouch2LieLower.baf 1.6 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone Lb_Lie
+AnimationStateMachine.setSpeed 1.0 1.0 1.0
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.setFlag c_AsmIsLying
+
+AnimationStateMachine.createState Ub_CrouchToLieThompson
+AnimationStateMachine.addAnimation Animations/Lie/3p/Thompson/3PCrouch2LieUpperThompson.baf 1.6 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone Ub_LieThompson
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.setFlag c_AsmIsLying
+include copyToallWeapons.inc Thompson 
+
+AnimationStateMachine.createState Lb_LieToCrouch
+AnimationStateMachine.setSoundTrigger c_SstStandUp
+AnimationStateMachine.addAnimation Animations/Lie/LowerBody/3PCrouch2LieLower.baf -2 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone Lb_Crouch
+AnimationStateMachine.setSpeed 1.0 1.0 1.0
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.setFlag c_AsmIsCrouching
+rem AnimationStateMachine.setFlag c_AsmIsLying
+
+AnimationStateMachine.createState Ub_LieToCrouchThompson
+AnimationStateMachine.addAnimation Animations/Lie/3p/Thompson/3PCrouch2LieUpperThompson.baf -2 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone Ub_CrouchThompson
+AnimationStateMachine.setMorphFactor 4.0
+include copyToallWeapons.inc Thompson
+
+
+AnimationStateMachine.createState Lb_LieToStand
+AnimationStateMachine.addAnimation Animations/Lie/LowerBody/3PCrouch2LieLower.baf -3 c_AsmPlayOnce
+AnimationStateMachine.setSpeed 1.0 1.0 1.0
+AnimationStateMachine.setMorphFactor 2.0
+AnimationStateMachine.addTransitionWhenDone Lb_CrouchToStand
+AnimationStateMachine.setFlag c_AsmIsLying
+
+AnimationStateMachine.createState Ub_LieToStandThompson
+AnimationStateMachine.addAnimation Animations/Lie/3p/Thompson/3PCrouch2LieUpperThompson.baf -2 c_AsmPlayOnce
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.addTransitionWhenDone Ub_CrouchToStand
+AnimationStateMachine.setFlag c_AsmIsLying
+include copyToallWeapons.inc Thompson
+
+
+rem
+rem **** Is Lieing Lower Body
+rem 
+AnimationStateMachine.createState Lb_Lie
+AnimationStateMachine.addAnimation Animations/Lie/LowerBody/3PLieBreathLower.baf 1 c_AsmLooping
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Lb_LieForward
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5 Lb_LieBackward
+AnimationStateMachine.addTransitionOne c_PIYaw  -1 -0.01 Lb_LieStrafeLeft
+AnimationStateMachine.addTransitionOne c_PIYaw  0.01 1 Lb_LieStrafeRight
+AnimationStateMachine.addTransitionOne c_PIMouseLookX  -1 -0.01 Lb_LieTurnLeft
+AnimationStateMachine.addTransitionOne c_PIMouseLookX  0.01 1 Lb_LieTurnRight
+AnimationStateMachine.returnToState Lb_Lie
+AnimationStateMachine.setSpeed 1.0 1.0 1.0
+AnimationStateMachine.setMorphFactor 2.0
+AnimationStateMachine.setFlag c_AsmIsLying
+
+AnimationStateMachine.createState Lb_LieForward
+AnimationStateMachine.setSoundTrigger c_SstCrawlMove
+AnimationStateMachine.addAnimation Animations/Lie/LowerBody/3PLieForwardLower.baf 1 c_AsmLooping
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Lb_LieForward
+AnimationStateMachine.returnToState Lb_Lie
+AnimationStateMachine.setSpeed 1.0 1.0 1.0
+AnimationStateMachine.setMorphFactor 2.0
+AnimationStateMachine.setFlag c_AsmIsLying
+AnimationStateMachine.setCameraShakeUpDown 0 0.04 5.0
+AnimationStateMachine.setCameraShakeFadeIn 0 0.3
+
+AnimationStateMachine.createState Lb_LieBackward
+AnimationStateMachine.setSoundTrigger c_SstCrawlMove
+AnimationStateMachine.addAnimation Animations/Lie/LowerBody/3PLieForwardLower.baf -1 c_AsmLooping
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5 Lb_LieBackward
+AnimationStateMachine.returnToState Lb_Lie
+AnimationStateMachine.setSpeed 1.0 1.0 1.0
+AnimationStateMachine.setMorphFactor 2.0
+AnimationStateMachine.setFlag c_AsmIsLying
+AnimationStateMachine.setCameraShakeUpDown 0 0.04 5.0
+AnimationStateMachine.setCameraShakeFadeIn 0 0.3
+
+rem --- Turn ---
+AnimationStateMachine.createState Lb_LieTurnLeft
+AnimationStateMachine.setSoundTrigger c_SstCrawlMove
+AnimationStateMachine.addAnimation Animations/Lie/LowerBody/3PLieTurnLeftLower.baf 2 c_AsmLooping
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Lb_LieForward
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5 Lb_LieBackward
+AnimationStateMachine.addTransitionOne c_PIMouseLookX  -1 -0.01 Lb_LieTurnLeft
+AnimationStateMachine.returnToState Lb_Lie
+AnimationStateMachine.setSpeed 1.0 1.0 1.0
+AnimationStateMachine.setFlag c_AsmIsLying
+AnimationStateMachine.setCameraShakeUpDown 0 0.04 5.0
+AnimationStateMachine.setCameraShakeFadeIn 0 0.3
+
+AnimationStateMachine.createState Lb_LieTurnRight
+AnimationStateMachine.setSoundTrigger c_SstCrawlMove
+AnimationStateMachine.addAnimation Animations/Lie/LowerBody/3PLieTurnRightLower.baf 2 c_AsmLooping
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Lb_LieForward
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5 Lb_LieBackward
+AnimationStateMachine.addTransitionOne c_PIMouseLookX  0.01 1 Lb_LieTurnRight
+AnimationStateMachine.returnToState Lb_Lie
+AnimationStateMachine.setSpeed 1.0 1.0 1.0
+AnimationStateMachine.setFlag c_AsmIsLying
+AnimationStateMachine.setCameraShakeUpDown 0 0.04 5.0
+AnimationStateMachine.setCameraShakeFadeIn 0 0.3
+
+rem --- Strafe ------
+AnimationStateMachine.createState Lb_LieStrafeLeft
+AnimationStateMachine.setSoundTrigger c_SstCrawlMove
+AnimationStateMachine.addAnimation Animations/Lie/LowerBody/3PLieTurnLeftLower.baf 2 c_AsmLooping
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Lb_LieForward
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5 Lb_LieBackward
+AnimationStateMachine.addTransitionOne c_PIMouseLookX  -1 -0.01 Lb_LieTurnLeft
+AnimationStateMachine.addTransitionOne c_PIYaw  -1 -0.01 Lb_LieStrafeLeft
+AnimationStateMachine.addTransitionOne c_PIYaw  0.01 1 Lb_LieStrafeRight
+AnimationStateMachine.returnToState Lb_Lie
+AnimationStateMachine.setSpeed 1.0 1.0 1.0
+AnimationStateMachine.setFlag c_AsmIsLying
+AnimationStateMachine.setCameraShakeUpDown 0 0.04 5.0
+AnimationStateMachine.setCameraShakeFadeIn 0 0.3
+
+AnimationStateMachine.createState Lb_LieStrafeRight
+AnimationStateMachine.setSoundTrigger c_SstCrawlMove
+AnimationStateMachine.addAnimation Animations/Lie/LowerBody/3PLieTurnRightLower.baf 2 c_AsmLooping
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Lb_LieForward
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5 Lb_LieBackward
+AnimationStateMachine.addTransitionOne c_PIMouseLookX  0.01 1 Lb_LieTurnRight
+AnimationStateMachine.addTransitionOne c_PIYaw  -1 -0.01 Lb_LieStrafeLeft
+AnimationStateMachine.addTransitionOne c_PIYaw  0.01 1 Lb_LieStrafeRight
+AnimationStateMachine.returnToState Lb_Lie
+AnimationStateMachine.setSpeed 1.0 1.0 1.0
+AnimationStateMachine.setFlag c_AsmIsLying
+AnimationStateMachine.setCameraShakeUpDown 0 0.04 5.0
+AnimationStateMachine.setCameraShakeFadeIn 0 0.3
+
+rem
+rem **** Is Lieing Upper Body
+rem 
+AnimationStateMachine.createState Ub_Lie
+AnimationStateMachine.addTransitionItem 
+
+rem *** Upper Thompson *****
+AnimationStateMachine.createState Ub_LieThompson
+AnimationStateMachine.addAnimation Animations/Lie/3p/Thompson/3PLieBreathUpperThompson.baf 1 c_AsmLooping
+AnimationStateMachine.addAnimation Animations/StandWalkRun/1p/Thompson/1pLieAimThompson.baf 0.2 c_AsmLooping
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Ub_LieForwardThompson
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5 Ub_LieBackwardThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  -1 -0.01 Ub_LieStrafeLeftThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  0.01 1 Ub_LieStrafeRightThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX  -1 -0.01 Ub_LieTurnLeftThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX  0.01 1 Ub_LieTurnRightThompson
+AnimationStateMachine.addTransitionOne c_PIFire 0.5 1 Ub_LieFireThompson
+AnimationStateMachine.addTransitionOne c_PIAltFire 0.5 1 Ub_LieAltFireThompson
+AnimationStateMachine.returnToState Ub_LieThompson
+AnimationStateMachine.setMorphFactor 0.7
+include copyToallWeapons.inc Thompson
+
+
+AnimationStateMachine.createState Ub_LieForwardThompson
+AnimationStateMachine.addAnimation Animations/Lie/3p/Thompson/3PLieForwardUpperThompson.baf 1 c_AsmLooping
+AnimationStateMachine.addAnimation Animations/StandWalkRun/1p/Thompson/1pCrawlThompson.baf 1 c_AsmLooping
+AnimationStateMachine.addTransitionOne c_PIFire 0.5 1 Ub_LieFireThompson
+AnimationStateMachine.addTransitionOne c_PIAltFire 0.5 1 Ub_LieAltFireThompson
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Ub_LieForwardThompson
+AnimationStateMachine.returnToState Ub_LieThompson
+AnimationStateMachine.setMorphFactor 0.5
+include copyToallWeapons.inc Thompson
+
+AnimationStateMachine.createState Ub_LieBackwardThompson
+AnimationStateMachine.addAnimation Animations/Lie/3p/Thompson/3PLieForwardUpperThompson.baf -1 c_AsmLooping
+AnimationStateMachine.addAnimation Animations/StandWalkRun/1p/Thompson/1pCrawlThompson.baf -1 c_AsmLooping
+AnimationStateMachine.addTransitionOne c_PIFire 0.5 1 Ub_LieFireThompson
+AnimationStateMachine.addTransitionOne c_PIAltFire 0.5 1 Ub_LieAltFireThompson
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5 Ub_LieBackwardThompson
+AnimationStateMachine.returnToState Ub_LieThompson
+AnimationStateMachine.setMorphFactor 0.5
+include copyToallWeapons.inc Thompson
+
+rem --- Turn ---
+AnimationStateMachine.createState Ub_LieTurnLeftThompson
+AnimationStateMachine.addAnimation Animations/Lie/3p/Thompson/3PLieTurnLeftUpperThompson.baf 2 c_AsmLooping
+AnimationStateMachine.addAnimation Animations/StandWalkRun/1p/Thompson/1pCrawlThompson.baf 1 c_AsmLooping
+AnimationStateMachine.addTransitionOne c_PIFire 0.5 1 Ub_LieFireThompson
+AnimationStateMachine.addTransitionOne c_PIAltFire 0.5 1 Ub_LieAltFireThompson
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Ub_LieForwardThompson
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5 Ub_LieBackwardThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX  -1 -0.01 Ub_LieTurnLeftThompson
+AnimationStateMachine.returnToState Ub_LieThompson
+AnimationStateMachine.setMorphFactor 0.5
+include copyToallWeapons.inc Thompson
+
+AnimationStateMachine.createState Ub_LieTurnRightThompson
+AnimationStateMachine.addAnimation Animations/Lie/3p/Thompson/3PLieTurnRightUpperThompson.baf 2 c_AsmLooping
+AnimationStateMachine.addAnimation Animations/StandWalkRun/1p/Thompson/1pCrawlThompson.baf 1 c_AsmLooping
+AnimationStateMachine.addTransitionOne c_PIFire 0.5 1 Ub_LieFireThompson
+AnimationStateMachine.addTransitionOne c_PIAltFire 0.5 1 Ub_LieAltFireThompson
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Ub_LieForwardThompson
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5 Ub_LieBackwardThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX  0.01 1 Ub_LieTurnRightThompson
+AnimationStateMachine.returnToState Ub_LieThompson
+AnimationStateMachine.setMorphFactor 0.5
+include copyToallWeapons.inc Thompson
+
+rem ----- Strafe ------
+AnimationStateMachine.createState Ub_LieStrafeLeftThompson
+AnimationStateMachine.setSoundTrigger c_SstCrawlMove
+AnimationStateMachine.addAnimation Animations/Lie/3p/Thompson/3PLieTurnLeftUpperThompson.baf 2 c_AsmLooping
+AnimationStateMachine.addAnimation Animations/StandWalkRun/1p/Thompson/1pCrawlThompson.baf 1 c_AsmLooping
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Ub_LieForwardThompson
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5 Ub_LieBackwardThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  -1 -0.01 Ub_LieStrafeLeftThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  0.01 1 Ub_LieStrafeRightThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX  0.01 1 Ub_LieTurnRightThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX  -1 -0.01 Ub_LieTurnLeftThompson
+AnimationStateMachine.returnToState Ub_LieThompson
+AnimationStateMachine.setMorphFactor 0.5
+include copyToallWeapons.inc Thompson
+
+AnimationStateMachine.createState Ub_LieStrafeRightThompson
+AnimationStateMachine.setSoundTrigger c_SstCrawlMove
+AnimationStateMachine.addAnimation Animations/Lie/3p/Thompson/3PLieTurnRightUpperThompson.baf 2 c_AsmLooping
+AnimationStateMachine.addAnimation Animations/StandWalkRun/1p/Thompson/1pCrawlThompson.baf 1 c_AsmLooping
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Ub_LieForwardThompson
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5 Ub_LieBackwardThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  -1 -0.01 Ub_LieStrafeLeftThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  0.01 1 Ub_LieStrafeRightThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX  0.01 1 Ub_LieTurnRightThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX  -1 -0.01 Ub_LieTurnLeftThompson
+AnimationStateMachine.returnToState Ub_LieThompson
+AnimationStateMachine.setMorphFactor 0.5
+include copyToallWeapons.inc Thompson
+
+
+rem
+rem   RunToLie
+rem
+AnimationStateMachine.createState Lb_RunStandToLie
+AnimationStateMachine.addAnimation Animations/Lie/LowerBody/3PJump2LieLower.baf 1.5 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone Lb_Lie
+AnimationStateMachine.setSpeed 6.0 1.0 1.0
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.setCameraShakeYaw 0 0.15 8.0
+AnimationStateMachine.setCameraShakeUpDown 0 0.08 15
+AnimationStateMachine.setCameraShakeLeftRight 0 0.02 5
+AnimationStateMachine.setCameraShakeFadeIn 0 0.6
+AnimationStateMachine.setFlag c_AsmIsLying
+
+AnimationStateMachine.createState Ub_RunStandToLie
+AnimationStateMachine.setFlag c_AsmIsLying
+AnimationStateMachine.addTransitionItem	
+
+AnimationStateMachine.createState Ub_RunStandToLieThompson
+AnimationStateMachine.addAnimation Animations/Lie/3p/Thompson/3PJump2LieUpperThompson.baf 1.5 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone Ub_LieThompson
+AnimationStateMachine.setMorphFactor 4.0
+include copyToallWeapons.inc Thompson

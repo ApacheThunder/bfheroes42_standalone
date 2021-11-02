@@ -1,0 +1,9 @@
+rem *** Create Tank ***
+game.spawnObject sherman
+object.name v_arg3
+
+rem *** Create Bot and attach to tank ***
+game.createAIPlayer v_arg3 v_arg2 Assault v_arg1
+ai.addBot v_arg3 v_arg2 default StandardWeights v_arg3
+
+rem EOF

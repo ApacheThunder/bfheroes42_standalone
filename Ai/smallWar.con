@@ -1,0 +1,38 @@
+console.useRelativePaths 0
+
+run ai/soldier 1 1
+run ai/soldier 1 2
+run ai/soldier 2 3
+run ai/soldier 2 4
+
+run ai/spawnTankPos 2 5 2410/80/1500 
+run ai/spawnTankPos 2 6 2400/80/1550 
+run ai/spawnTankPos 2 7 2375/80/1600 
+run ai/spawnTankPos 2 8 2410/80/1450 
+
+run ai/spawnTankPos 1 9 2040/80/1840
+run ai/spawnTankPos 1 10 2020/80/1840
+run ai/spawnTankPos 1 11 2060/80/1840
+run ai/spawnTankPos 1 12 2080/80/1840
+
+console.useRelativePaths 1
+
+ObjectTemplate.create ObjectSpawner shermanSpawner
+ObjectTemplate.ObjectTemplate sherman
+ObjectTemplate.SpawnDelay 20
+ObjectTemplate.SpawnDelayAtStart 0
+ObjectTemplate.TimeToLive 120
+ObjectTemplate.Distance 200
+
+Object.create ShermanSpawner
+Object.absolutePosition 2380/80/1500
+Object.rotation 0/0/0
+
+Object.create ShermanSpawner
+Object.absolutePosition 2175/80/1825
+Object.rotation 0/0/0
+
+game.showAIstats 0
+
+
+rem EOF

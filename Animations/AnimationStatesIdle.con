@@ -1,0 +1,110 @@
+rem ***
+rem *** AnimationStatesIdle.con
+rem ***
+
+AnimationStateMachine.createState Ub_IdleThompson1
+AnimationStateMachine.addAnimation Animations/WeaponHandling/3p/Thompson/3pIdle1Thompson.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.addAnimation Animations/WeaponHandling/1p/Thompson/1pIdle1Thompson.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.addTransitionOne c_PIFire 0.5 1 Ub_Fire
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Ub_RunForwardThompson
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5 Ub_RunBackwardThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  -1 -0.01 Ub_StrafeLeftThompson
+AnimationStateMachine.addTransitionOne c_PIAction 0.5 1 Ub_StandJumpThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  0.01 1 Ub_StrafeRightThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX -1000 -0.0001 Ub_TurnThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX 0.0001 1000 Ub_TurnThompson
+AnimationStateMachine.addTransitionWhenDone Ub_StandAimThompson
+include copyToallWeapons.inc Thompson
+
+AnimationStateMachine.createState Ub_IdleThompson2
+AnimationStateMachine.addAnimation Animations/WeaponHandling/3p/Thompson/3pIdle2Thompson.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.addAnimation Animations/WeaponHandling/1p/Thompson/1pIdle2Thompson.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.addTransitionOne c_PIFire 0.5 1 Ub_Fire
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Ub_RunForwardThompson
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5 Ub_RunBackwardThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  -1 -0.01 Ub_StrafeLeftThompson
+AnimationStateMachine.addTransitionOne c_PIAction 0.5 1 Ub_StandJumpThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  0.01 1 Ub_StrafeRightThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX -1000 -0.0001 Ub_TurnThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX 0.0001 1000 Ub_TurnThompson
+AnimationStateMachine.addTransitionWhenDone Ub_StandAimThompson
+include copyToallWeapons.inc Thompson
+
+AnimationStateMachine.createState Ub_IdleThompson3
+AnimationStateMachine.addAnimation Animations/WeaponHandling/3p/Thompson/3pIdle3Thompson.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.addAnimation Animations/WeaponHandling/1p/Thompson/1pIdle3Thompson.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.addTransitionOne c_PIFire 0.5 1 Ub_Fire
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Ub_RunForwardThompson
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5 Ub_RunBackwardThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  -1 -0.01 Ub_StrafeLeftThompson
+AnimationStateMachine.addTransitionOne c_PIAction 0.5 1 Ub_StandJumpThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  0.01 1 Ub_StrafeRightThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX -1000 -0.0001 Ub_TurnThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX 0.0001 1000 Ub_TurnThompson
+AnimationStateMachine.addTransitionWhenDone Ub_StandAimThompson
+include copyToallWeapons.inc Thompson
+
+rem *** AnimationStateMachine.createState Ub_IdleThompson4
+rem *** AnimationStateMachine.addAnimation Animations/WeaponHandling/3p/Thompson/3pIdle4Thompson.baf 1.0 rem *** c_AsmPlayOnce
+rem *** AnimationStateMachine.addAnimation Animations/WeaponHandling/1p/Thompson/1pIdle4Thompson.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.addTransitionOne c_PIFire 0.5 1 Ub_Fire
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Ub_RunForwardThompson
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5 Ub_RunBackwardThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  -1 -0.01 Ub_StrafeLeftThompson
+AnimationStateMachine.addTransitionOne c_PIAction 0.5 1 Ub_StandJumpThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  0.01 1 Ub_StrafeRightThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX -1000 -0.0001 Ub_TurnThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX 0.0001 1000 Ub_TurnThompson
+rem *** AnimationStateMachine.addTransitionWhenDone Ub_StandAimThompson
+rem *** include copyToallWeapons.inc Thompson
+
+
+rem ******* Crouch *****
+AnimationStateMachine.createState Ub_CrouchIdleThompson1
+AnimationStateMachine.addAnimation Animations/WeaponHandling/3p/Thompson/3pIdle1Thompson.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.addAnimation Animations/WeaponHandling/1p/Thompson/1pIdle1Thompson.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.addTransitionOne c_PIFire 0.5 1 Ub_Fire
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Ub_CrouchForwardThompson
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5 Ub_CrouchBackwardThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  -1 -0.01 Ub_CrouchStrafeLeftThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  0.01 1 Ub_CrouchStrafeRightThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX -1000 -0.0001 Ub_CrouchTurnThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX 0.0001 1000 Ub_CrouchTurnThompson
+AnimationStateMachine.addTransitionWhenDone Ub_CrouchThompson
+include copyToallWeapons.inc Thompson
+
+AnimationStateMachine.createState Ub_CrouchIdleThompson2
+AnimationStateMachine.addAnimation Animations/WeaponHandling/3p/Thompson/3pIdle2Thompson.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.addAnimation Animations/WeaponHandling/1p/Thompson/1pIdle2Thompson.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.addTransitionOne c_PIFire 0.5 1 Ub_Fire
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Ub_CrouchForwardThompson
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5 Ub_CrouchBackwardThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  -1 -0.01 Ub_CrouchStrafeLeftThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  0.01 1 Ub_CrouchStrafeRightThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX -1000 -0.0001 Ub_CrouchTurnThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX 0.0001 1000 Ub_CrouchTurnThompson
+AnimationStateMachine.addTransitionWhenDone Ub_CrouchThompson
+include copyToallWeapons.inc Thompson
+
+AnimationStateMachine.createState Ub_CrouchIdleThompson3
+AnimationStateMachine.addAnimation Animations/WeaponHandling/3p/Thompson/3pIdle3Thompson.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.addAnimation Animations/WeaponHandling/1p/Thompson/1pIdle3Thompson.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.addTransitionOne c_PIFire 0.5 1 Ub_Fire
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Ub_CrouchForwardThompson
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5 Ub_CrouchBackwardThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  -1 -0.01 Ub_CrouchStrafeLeftThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  0.01 1 Ub_CrouchStrafeRightThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX -1000 -0.0001 Ub_CrouchTurnThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX 0.0001 1000 Ub_CrouchTurnThompson
+AnimationStateMachine.addTransitionWhenDone Ub_CrouchThompson
+include copyToallWeapons.inc Thompson
+
+
+
+rem *** Animations to make the sprint in the Allies Grenade move.
+
+AnimationStateMachine.setActiveState Ub_IdleGrenadeAllies1
+AnimationStateMachine.setOtherState c_AsmWeaponState WeaponGrenadeAlliesIdle1
+
+AnimationStateMachine.createState WeaponGrenadeAlliesIdle1
+AnimationStateMachine.addAnimation Animations/Weapons/GrenadeAllies/GrenadeAlliesIdle1.baf 0.86 c_AsmPlayOnce

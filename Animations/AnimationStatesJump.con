@@ -1,0 +1,50 @@
+rem Jump
+rem ***				 ------- LOWER BODY ------
+rem
+
+rem --- Jump ----
+AnimationStateMachine.createState Lb_StandJump
+AnimationStateMachine.setSoundTrigger c_SstJump
+AnimationStateMachine.addAnimation Animations/StandWalkRun/LowerBody/3pJumpStandLower.baf 0.8 0
+AnimationStateMachine.addTransitionWhenDone Lb_Stand
+AnimationStateMachine.setSpeed 1 1 1
+AnimationStateMachine.setMorphFactor 4.0
+
+
+AnimationStateMachine.createState Lb_RunJump
+AnimationStateMachine.setSoundTrigger c_SstJump
+AnimationStateMachine.addAnimation Animations/StandWalkRun/LowerBody/3pJumpRunLower.baf 1.0 0
+AnimationStateMachine.addTransitionWhenDone Lb_RunForward
+AnimationStateMachine.setSpeed 1 1 1
+AnimationStateMachine.setMorphFactor 100.0
+
+AnimationStateMachine.createState Lb_RunJumpBackward
+AnimationStateMachine.setSoundTrigger c_SstJump
+AnimationStateMachine.addAnimation Animations/StandWalkRun/LowerBody/3pJumpRunLower.baf -1.2 0
+AnimationStateMachine.addTransitionWhenDone Lb_RunBackward
+AnimationStateMachine.setSpeed 1 1 1
+AnimationStateMachine.setMorphFactor 50.0
+
+
+rem
+rem ***				 ------- UPPER BODY ------
+rem
+
+AnimationStateMachine.createState Ub_StandJumpThompson
+AnimationStateMachine.setOtherState c_AsmFaceState FaceFire1
+AnimationStateMachine.addAnimation Animations/StandWalkRun/3p/Thompson/3pJumpStandUpperThompson.baf 0.8 0
+AnimationStateMachine.addAnimation Animations/StandWalkRun/1p/Thompson/1pRunThompson.baf 0.4 1
+AnimationStateMachine.addTransitionWhenDone Ub_StandAimThompson
+AnimationStateMachine.setSpeed 1 1 1
+AnimationStateMachine.setMorphFactor 4.0
+include copyToallWeapons.inc Thompson
+
+AnimationStateMachine.createState Ub_RunJumpThompson
+AnimationStateMachine.setOtherState c_AsmFaceState FaceFire1
+AnimationStateMachine.addAnimation Animations/StandWalkRun/3p/Thompson/3PJumpRunUpperThompson.baf 1 0
+AnimationStateMachine.addAnimation Animations/StandWalkRun/1p/Thompson/1pRunThompson.baf 1.2 1
+AnimationStateMachine.addTransitionWhenDone Ub_RunForwardThompson
+AnimationStateMachine.setMorphFactor 100.0
+include copyToallWeapons.inc Thompson
+
+

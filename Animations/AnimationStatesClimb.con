@@ -1,0 +1,162 @@
+REM *************** CLIMB ******** ******************
+REM *************** LOWER BODY ******************
+
+rem --- Climb ladder ----
+AnimationStateMachine.createState Lb_ClimbLadderIdle1
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PClimbLadderIdle1Lower.baf 1 c_AsmLooping
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1  Lb_ClimbLadder1
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5  Lb_ClimbLadder1B
+AnimationStateMachine.setSpeed 1.0 0 0
+AnimationStateMachine.setMorphFactor 1.0
+AnimationStateMachine.setFlag c_AsmHideWeapon
+AnimationStateMachine.setFlag c_AsmIsClimbing
+AnimationStateMachine.setFlag c_AsmLockFreeLook
+
+AnimationStateMachine.createState Lb_ClimbLadderIdle2
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PClimbLadderIdle2Lower.baf 1 c_AsmLooping
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1  Lb_ClimbLadder2
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5  Lb_ClimbLadder2B
+AnimationStateMachine.setSpeed 1.0 0 0
+AnimationStateMachine.setMorphFactor 1.0
+AnimationStateMachine.setFlag c_AsmHideWeapon
+AnimationStateMachine.setFlag c_AsmIsClimbing
+AnimationStateMachine.setFlag c_AsmLockFreeLook
+
+AnimationStateMachine.createState Lb_ClimbLadder1
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PClimbLadder1Lower.baf 4.8 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone Lb_ClimbLadderIdle2
+AnimationStateMachine.setSpeed 0.7 0 0
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.setFlag c_AsmHideWeapon
+AnimationStateMachine.setFlag c_AsmIsClimbing
+AnimationStateMachine.setFlag c_AsmLockFreeLook
+AnimationStateMachine.setSoundTrigger c_SstClimbLadder
+
+AnimationStateMachine.createState Lb_ClimbLadder1B
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PClimbLadder2Lower.baf -5.6 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone Lb_ClimbLadderIdle2
+AnimationStateMachine.setSpeed 0.7 0 0
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.setFlag c_AsmHideWeapon
+AnimationStateMachine.setFlag c_AsmIsClimbing
+AnimationStateMachine.setFlag c_AsmLockFreeLook
+AnimationStateMachine.setSoundTrigger c_SstClimbLadder
+
+AnimationStateMachine.createState Lb_ClimbLadder2
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PClimbLadder2Lower.baf 4.8 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone Lb_ClimbLadderIdle1
+AnimationStateMachine.setSpeed 0.7 0 0
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.setFlag c_AsmHideWeapon
+AnimationStateMachine.setFlag c_AsmIsClimbing
+AnimationStateMachine.setFlag c_AsmLockFreeLook
+AnimationStateMachine.setSoundTrigger c_SstClimbLadder
+
+AnimationStateMachine.createState Lb_ClimbLadder2B
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PClimbLadder1Lower.baf -5.6 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone Lb_ClimbLadderIdle1
+AnimationStateMachine.setSpeed 0.7 0 0
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.setFlag c_AsmHideWeapon
+AnimationStateMachine.setFlag c_AsmIsClimbing
+AnimationStateMachine.setFlag c_AsmLockFreeLook
+AnimationStateMachine.setSoundTrigger c_SstClimbLadder
+
+AnimationStateMachine.createState Lb_ClimbLadderEnd1
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PClimbLadderEnd1Lower.baf 2 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone Lb_ClimbLadderExit
+AnimationStateMachine.setSpeed 1 0 0
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.setFlag c_AsmHideWeapon
+AnimationStateMachine.setFlag c_AsmIsClimbing
+AnimationStateMachine.setFlag c_AsmLockFreeLook
+AnimationStateMachine.setSoundTrigger c_SstClimbLadder
+
+AnimationStateMachine.createState Lb_ClimbLadderEnd2
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PClimbLadderEnd2Lower.baf 2 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone Lb_ClimbLadderExit
+AnimationStateMachine.setSpeed 1.0 0 0
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.setFlag c_AsmHideWeapon
+AnimationStateMachine.setFlag c_AsmIsClimbing
+AnimationStateMachine.setFlag c_AsmLockFreeLook
+AnimationStateMachine.setSoundTrigger c_SstClimbLadder
+
+AnimationStateMachine.createState Lb_ClimbLadderExit
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PClimbLadderExitLower.baf 2 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone StopClimbing
+AnimationStateMachine.setSpeed 1.0 0 0
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.setFlag c_AsmHideWeapon
+AnimationStateMachine.setFlag c_AsmIsClimbing
+AnimationStateMachine.setFlag c_AsmLockFreeLook
+AnimationStateMachine.setSoundTrigger c_SstClimbLadder
+
+AnimationStateMachine.createState StopClimbing
+
+REM *************** UPPER BODY ******************
+
+rem --- Climb ladder ----
+AnimationStateMachine.createState Ub_ClimbLadderStart1
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PClimbLadderStart1Upper.baf 1.4 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone Ub_ClimbLadderIdle1
+AnimationStateMachine.setSpeed 1.0 0 0
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.setFlag c_AsmIsClimbing
+
+AnimationStateMachine.createState Ub_ClimbLadderIdle1
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PClimbLadderIdle1Upper.baf 1 c_AsmLooping
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1  Ub_ClimbLadder1
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5  Ub_ClimbLadder1B
+AnimationStateMachine.setMorphFactor 1.0
+AnimationStateMachine.setFlag c_AsmIsClimbing
+
+AnimationStateMachine.createState Ub_ClimbLadderIdle2
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PClimbLadderIdle2Upper.baf 1 c_AsmLooping
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1  Ub_ClimbLadder2
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5  Ub_ClimbLadder2B
+AnimationStateMachine.setMorphFactor 1.0
+AnimationStateMachine.setFlag c_AsmIsClimbing
+
+AnimationStateMachine.createState Ub_ClimbLadder1
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PClimbLadder1Upper.baf 4.8 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone Ub_ClimbLadderIdle2
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.setFlag c_AsmIsClimbing
+
+AnimationStateMachine.createState Ub_ClimbLadder1B
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PClimbLadder2Upper.baf -5.6 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone Ub_ClimbLadderIdle2
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.setFlag c_AsmIsClimbing
+
+AnimationStateMachine.createState Ub_ClimbLadder2
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PClimbLadder2Upper.baf 4.8 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone Ub_ClimbLadderIdle1
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.setFlag c_AsmIsClimbing
+
+AnimationStateMachine.createState Ub_ClimbLadder2B
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PClimbLadder1Upper.baf -5.6 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone Ub_ClimbLadderIdle1
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.setFlag c_AsmIsClimbing
+
+AnimationStateMachine.createState Ub_ClimbLadderEnd1
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PClimbLadderEnd1Upper.baf 2 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone Ub_ClimbLadderExit
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.setFlag c_AsmIsClimbing
+
+AnimationStateMachine.createState Ub_ClimbLadderEnd2
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PClimbLadderEnd2Upper.baf 2 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone Ub_ClimbLadderExit
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.setFlag c_AsmIsClimbing
+
+AnimationStateMachine.createState Ub_ClimbLadderExit
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/3PClimbLadderExitUpper.baf 2 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone StopClimbing
+AnimationStateMachine.setMorphFactor 4.0
+AnimationStateMachine.setFlag c_AsmIsClimbing
+

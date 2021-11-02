@@ -1,0 +1,7 @@
+admin.enableMapVote 1
+admin.enableKickPlayerVote 1
+admin.enableKickTeamPlayerVote 1
+admin.voteMapMajority 0.600000
+admin.voteKickPlayerMajority 0.600000
+admin.voteKickTeamPlayerMajority 0.600000
+admin.votingTime 60.000000

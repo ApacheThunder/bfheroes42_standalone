@@ -1,0 +1,173 @@
+rem *** HMFreeze = 1
+AnimationStateMachine.createState HandSign_Freeze
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/Handsignals/3pHandSign_Freeze.baf 1 c_AsmPlayOnce
+AnimationStateMachine.setMorphFactor 2.5
+AnimationStateMachine.addTransitionWhenDone StopDummyState
+
+AnimationStateMachine.createState HandSign_Come
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/Handsignals/3pHandSign_Come.baf 1 c_AsmPlayOnce
+AnimationStateMachine.setMorphFactor 2.5
+AnimationStateMachine.addTransitionWhenDone StopDummyState
+
+AnimationStateMachine.createState HandSign_Medic
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/Handsignals/3pHandSign_Medic.baf 1 c_AsmPlayOnce
+AnimationStateMachine.setMorphFactor 2.5
+AnimationStateMachine.addTransitionWhenDone StopDummyState
+
+AnimationStateMachine.createState HandSign_Shout
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/Handsignals/3pHandSign_Shout.baf 1 c_AsmPlayOnce
+AnimationStateMachine.setMorphFactor 2.5
+AnimationStateMachine.addTransitionWhenDone StopDummyState
+
+AnimationStateMachine.createState HandSign_Down
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/Handsignals/3pHandSign_Down.baf 1 c_AsmPlayOnce
+AnimationStateMachine.setMorphFactor 2.5
+AnimationStateMachine.addTransitionWhenDone StopDummyState
+
+AnimationStateMachine.createState HandSign_Roger
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/Handsignals/3pHandSign_Roger.baf 1 c_AsmPlayOnce
+AnimationStateMachine.setMorphFactor 2.5
+AnimationStateMachine.addTransitionWhenDone StopDummyState
+
+AnimationStateMachine.createState HandSign_Negative
+AnimationStateMachine.addAnimation animations/3P_NoWeapon/Handsignals/3pHandSign_Negative.baf 1 c_AsmPlayOnce
+AnimationStateMachine.setMorphFactor 2.5
+AnimationStateMachine.addTransitionWhenDone StopDummyState
+
+
+rem --- Dead-Hit ---
+AnimationStateMachine.createState FaceDead1
+AnimationStateMachine.addAnimation animations/Facial/USFaceDead01.baf 1.0 c_AsmPlayOnce
+
+AnimationStateMachine.createState FaceDead2
+AnimationStateMachine.addAnimation animations/Facial/USFaceDead02.baf 1.0 c_AsmPlayOnce
+
+AnimationStateMachine.createState FaceHit
+AnimationStateMachine.addAnimation animations/Facial/USFaceHit.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone FaceLook
+
+rem --- Shoot ---
+AnimationStateMachine.createState FaceAim1
+AnimationStateMachine.addAnimation animations/Facial/USFaceAim01.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone FaceLook
+
+AnimationStateMachine.createState FaceAim2
+AnimationStateMachine.addAnimation animations/Facial/USFaceAim02.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone FaceLook
+
+AnimationStateMachine.createState FaceFire1
+AnimationStateMachine.addAnimation animations/Facial/USFaceFire01.baf 1.0 c_AsmLooping
+AnimationStateMachine.addTransitionWhenDone FaceLook
+
+rem --- Idle ---
+AnimationStateMachine.createState FaceLook
+AnimationStateMachine.addIdle FaceLook2
+AnimationStateMachine.addIdle FaceBlink
+AnimationStateMachine.addIdle FaceLook3
+AnimationStateMachine.addIdle FaceBlink
+AnimationStateMachine.addIdle FaceLook2
+AnimationStateMachine.addIdle FaceLook3
+AnimationStateMachine.addIdle FaceLook2
+AnimationStateMachine.addIdle FaceTalk
+AnimationStateMachine.addIdle FaceAngry1
+AnimationStateMachine.addAnimation animations/Facial/USFaceIdle60.baf 1.0 c_AsmLooping
+
+AnimationStateMachine.createState FaceBlink
+AnimationStateMachine.addAnimation animations/Facial/USFaceBlink01.baf 1.2 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone FaceLook
+
+AnimationStateMachine.createState FaceLook2
+AnimationStateMachine.addAnimation animations/Facial/USFacelook01.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone FaceLook
+
+AnimationStateMachine.createState FaceLook3
+AnimationStateMachine.addAnimation animations/Facial/USFaceIdle20.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone FaceLook
+
+rem --- Other ---
+AnimationStateMachine.createState FaceHeal
+AnimationStateMachine.addAnimation animations/Facial/USFaceHeal.baf 0.7 c_AsmLooping
+AnimationStateMachine.addTransitionWhenDone FaceLook
+
+AnimationStateMachine.createState FaceFun1
+AnimationStateMachine.addAnimation animations/Facial/USFaceFun01.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone FaceLook
+
+AnimationStateMachine.createState FaceFun2
+AnimationStateMachine.addAnimation animations/Facial/USFaceFun02.baf 1.0 c_AsmLooping
+AnimationStateMachine.addTransitionWhenDone FaceLook
+
+AnimationStateMachine.createState FaceAngry2
+AnimationStateMachine.addAnimation animations/Facial/USFaceAGRR.baf 1.0 c_AsmLooping
+AnimationStateMachine.addTransitionWhenDone FaceLook
+
+AnimationStateMachine.createState FaceScream
+AnimationStateMachine.addAnimation animations/Facial/USFaceScream01.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone FaceLook
+
+AnimationStateMachine.createState FaceAngry1
+AnimationStateMachine.addAnimation animations/Facial/USFaceAngry01.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone FaceLook
+
+AnimationStateMachine.createState FaceTalk
+AnimationStateMachine.addAnimation animations/Facial/USFaceTalk.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone FaceLook
+
+rem 
+rem *** Speaking ****
+rem 
+AnimationStateMachine.createState Face_blink
+AnimationStateMachine.addAnimation animations/Facial/Speak_Blink.baf 0.03 c_AsmPlayOnce
+AnimationStateMachine.setMorphFactor 10.0
+AnimationStateMachine.addSpeakConnectionSymbol ;
+
+AnimationStateMachine.createState Face_normal
+AnimationStateMachine.addAnimation animations/Facial/Speak_Normal.baf 0.03 c_AsmPlayOnce
+AnimationStateMachine.setMorphFactor 10.0
+AnimationStateMachine.addSpeakConnectionSymbol _
+
+AnimationStateMachine.createState Face_normal_i
+AnimationStateMachine.addAnimation animations/Facial/Speak_Normal_i.baf 0.03 c_AsmPlayOnce
+AnimationStateMachine.setMorphFactor 10.0
+AnimationStateMachine.addSpeakConnectionSymbol i
+
+AnimationStateMachine.createState Face_normal_e
+AnimationStateMachine.addAnimation animations/Facial/Speak_Normal_e.baf 0.03 c_AsmPlayOnce
+AnimationStateMachine.setMorphFactor 10.0
+AnimationStateMachine.addSpeakConnectionSymbol e
+
+AnimationStateMachine.createState Face_normal_o
+AnimationStateMachine.addAnimation animations/Facial/Speak_Normal_o.baf 0.03 c_AsmPlayOnce
+AnimationStateMachine.setMorphFactor 10.0
+AnimationStateMachine.addSpeakConnectionSymbol o
+
+AnimationStateMachine.createState Face_normal_m
+AnimationStateMachine.addAnimation animations/Facial/Speak_Normal_m.baf 0.03 c_AsmPlayOnce
+AnimationStateMachine.setMorphFactor 10.0
+AnimationStateMachine.addSpeakConnectionSymbol m
+
+AnimationStateMachine.createState Face_angry
+AnimationStateMachine.addAnimation animations/Facial/Speak_angry.baf 0.03 c_AsmPlayOnce
+AnimationStateMachine.setMorphFactor 10.0
+AnimationStateMachine.addSpeakConnectionSymbol -
+
+AnimationStateMachine.createState Face_angry_i
+AnimationStateMachine.addAnimation animations/Facial/Speak_angry_i.baf 0.03 c_AsmPlayOnce
+AnimationStateMachine.setMorphFactor 10.0
+AnimationStateMachine.addSpeakConnectionSymbol I
+
+AnimationStateMachine.createState Face_angry_e
+AnimationStateMachine.addAnimation animations/Facial/Speak_angry_e.baf 0.03 c_AsmPlayOnce
+AnimationStateMachine.setMorphFactor 10.0
+AnimationStateMachine.addSpeakConnectionSymbol E
+
+AnimationStateMachine.createState Face_angry_o
+AnimationStateMachine.addAnimation animations/Facial/Speak_angry_o.baf 0.03 c_AsmPlayOnce
+AnimationStateMachine.setMorphFactor 10.0
+AnimationStateMachine.addSpeakConnectionSymbol O
+
+AnimationStateMachine.createState Face_angry_m
+AnimationStateMachine.addAnimation animations/Facial/Speak_angry_m.baf 0.03 c_AsmPlayOnce
+AnimationStateMachine.setMorphFactor 10.0
+AnimationStateMachine.addSpeakConnectionSymbol M
+

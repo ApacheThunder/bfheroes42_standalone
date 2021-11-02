@@ -1,0 +1,177 @@
+rem ***************************
+rem *** Upper body states ***
+rem ***************************
+AnimationStateMachine.createState Ub_Stand
+AnimationStateMachine.addTransitionItem
+
+AnimationStateMachine.createState Ub_StandAim
+AnimationStateMachine.addTransitionItem
+
+rem
+rem ***				 ------- UPPER BODY ------
+rem
+
+
+rem
+rem 				*** Thompson
+rem
+AnimationStateMachine.createState Ub_StandThompson
+AnimationStateMachine.addAnimation Animations/StandWalkRun/3p/Thompson/3PStandUpperThompson.baf 0.8 1
+AnimationStateMachine.addAnimation Animations/StandWalkRun/1p/Thompson/1PStandThompson.baf 0.1 1
+AnimationStateMachine.addTransitionOne c_PIFire 0.5 1 Ub_Fire
+AnimationStateMachine.addTransitionOne c_PIAltFire 0.5 1 Ub_AltFire
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Ub_RunForwardThompson
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5 Ub_RunBackwardThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  -1 -0.01 Ub_StrafeLeftThompson
+AnimationStateMachine.addTransitionOne c_PIAction 0.5 1 Ub_StandJumpThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  0.01 1 Ub_StrafeRightThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX -1000 -0.0001 Ub_TurnThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX 0.0001 1000 Ub_TurnThompson
+AnimationStateMachine.returnToState Ub_StandThompson
+AnimationStateMachine.setMorphFactor 0.3
+include copyToallWeapons.inc Thompson
+
+AnimationStateMachine.createState Ub_TurnThompson
+AnimationStateMachine.addAnimation Animations/StandWalkRun/3p/Thompson/3PRunUpperThompson.baf 1.6 1
+AnimationStateMachine.addAnimation Animations/StandWalkRun/1p/Thompson/1pRunThompson.baf 0.7 1
+AnimationStateMachine.addTransitionOne c_PIFire 0.5 1 Ub_Fire
+AnimationStateMachine.addTransitionOne c_PIAltFire 0.5 1 Ub_AltFire
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Ub_RunForwardThompson
+AnimationStateMachine.addTransitionOne c_PIThrottle 1 0.5 Ub_RunBackwardThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  1 0.01 Ub_StrafeLeftThompson
+AnimationStateMachine.addTransitionOne c_PIAction 0.5 1 Ub_StandJumpThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  0.01 1 Ub_StrafeRightThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX 1 0.01 Ub_TurnThompson
+AnimationStateMachine.addTransitionOne c_PIMouseLookX 0.01 1 Ub_TurnThompson
+AnimationStateMachine.returnToState Ub_StandAimThompson 
+AnimationStateMachine.setMorphFactor 2.0
+include copyToallWeapons.inc Thompson
+
+AnimationStateMachine.createState Ub_StandAimThompson
+AnimationStateMachine.addAnimation Animations/StandWalkRun/3p/Thompson/3PStandAimUpperThompson.baf 0.8 1
+AnimationStateMachine.addAnimation Animations/StandWalkRun/1p/Thompson/1PStandAimThompson.baf 0.1 1
+AnimationStateMachine.addIdle Ub_IdleThompson1
+AnimationStateMachine.addIdle Ub_IdleThompson2
+AnimationStateMachine.addIdle Ub_IdleThompson3
+rem *** AnimationStateMachine.addIdle Ub_IdleThompson4
+AnimationStateMachine.addTransitionOne c_PIFire 0.5 1 Ub_Fire
+AnimationStateMachine.addTransitionOne c_PIAltFire 0.5 1 Ub_AltFire
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Ub_RunForwardThompson
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5 Ub_RunBackwardThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  -1 -0.01 Ub_StrafeLeftThompson
+AnimationStateMachine.addTransitionOne c_PIAction 0.5 1 Ub_StandJumpThompson
+AnimationStateMachine.addTransitionOne c_PIYaw  0.01 1 Ub_StrafeRightThompson
+AnimationStateMachine.returnToState Ub_StandAimThompson
+AnimationStateMachine.setMorphFactor 0.7
+include copyToallWeapons.inc Thompson
+
+rem --- Walk ----
+AnimationStateMachine.createState Ub_WalkForwardThompson
+AnimationStateMachine.addAnimation Animations/StandWalkRun/3p/Thompson/3PWalkUpperThompson.baf 0.7 1
+AnimationStateMachine.addAnimation Animations/StandWalkRun/1p/Thompson/1pRunThompson.baf 0.5 1
+AnimationStateMachine.addTransitionOne c_PIFire 0.5 1 Ub_Fire
+AnimationStateMachine.addTransitionOne c_PIAltFire 0.5 1 Ub_AltFire
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Ub_WalkForwardThompson
+AnimationStateMachine.addToLatestTransition c_PIWalk 0.5 1
+AnimationStateMachine.addTransitionOne c_PIThrottle -9999 -0.5 Ub_WalkBackwardThompson
+AnimationStateMachine.addToLatestTransition c_PIWalk 0.5 1
+AnimationStateMachine.addTransitionOne c_PIAction 0.5 1 Ub_StandJumpThompson
+AnimationStateMachine.returnToState Ub_StandAimThompson
+AnimationStateMachine.setMorphFactor 0.5
+include copyToallWeapons.inc Thompson
+
+AnimationStateMachine.createState Ub_WalkBackwardThompson
+AnimationStateMachine.addAnimation Animations/StandWalkRun/3p/Thompson/3PWalkUpperThompson.baf -0.7 1
+AnimationStateMachine.addAnimation Animations/StandWalkRun/1p/Thompson/1pRunThompson.baf -0.5 1
+AnimationStateMachine.addTransitionOne c_PIFire 0.5 1 Ub_Fire
+AnimationStateMachine.addTransitionOne c_PIAltFire 0.5 1 Ub_AltFire
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Ub_WalkForwardThompson
+AnimationStateMachine.addToLatestTransition c_PIWalk 0.5 1
+AnimationStateMachine.addTransitionOne c_PIThrottle -9999 -0.5 Ub_WalkBackwardThompson
+AnimationStateMachine.addToLatestTransition c_PIWalk 0.5 1
+AnimationStateMachine.returnToState Ub_StandAimThompson
+AnimationStateMachine.setMorphFactor 0.5
+include copyToallWeapons.inc Thompson
+
+rem --- Run ----
+AnimationStateMachine.createState Ub_RunForwardThompson
+AnimationStateMachine.addAnimation Animations/StandWalkRun/3p/Thompson/3PRunUpperThompson.baf 1.6 1
+AnimationStateMachine.addAnimation Animations/StandWalkRun/1p/Thompson/1pRunThompson.baf 0.7 1
+AnimationStateMachine.addTransitionOne c_PIFire 0.5 1 Ub_Fire
+AnimationStateMachine.addTransitionOne c_PIAltFire 0.5 1 Ub_AltFire
+AnimationStateMachine.addTransitionOne c_PIWalk 0.5 9999 Ub_WalkForwardThompson
+AnimationStateMachine.addTransitionOne c_PIAction 0.5 1 Ub_RunJumpThompson
+AnimationStateMachine.addTransitionOne c_PIThrottle 0.5 1 Ub_RunForwardThompson
+AnimationStateMachine.returnToState Ub_StandAimThompson 
+AnimationStateMachine.setMorphFactor 0.5
+include copyToallWeapons.inc Thompson
+
+AnimationStateMachine.createState Ub_RunBackwardThompson
+AnimationStateMachine.addAnimation Animations/StandWalkRun/3p/Thompson/3PRunBackUpperThompson.baf -1.6 1
+AnimationStateMachine.addAnimation Animations/StandWalkRun/1p/Thompson/1pRunThompson.baf -0.7 1
+AnimationStateMachine.addTransitionOne c_PIFire 0.5 1 Ub_Fire
+AnimationStateMachine.addTransitionOne c_PIAltFire 0.5 1 Ub_AltFire
+AnimationStateMachine.addTransitionOne c_PIWalk 0.5 9999 Ub_WalkBackwardThompson
+AnimationStateMachine.addTransitionOne c_PIThrottle -1 -0.5  Ub_RunBackwardThompson
+AnimationStateMachine.returnToState Ub_StandAimThompson
+AnimationStateMachine.setMorphFactor 0.5
+include copyToallWeapons.inc Thompson
+
+rem --- Strafe ----
+AnimationStateMachine.createState Ub_StrafeLeftThompson
+AnimationStateMachine.addAnimation Animations/StandWalkRun/3p/Thompson/3PRunUpperThompson.baf -1.6 1
+AnimationStateMachine.addAnimation Animations/StandWalkRun/1p/Thompson/1pRunThompson.baf -0.7 1
+AnimationStateMachine.addTransitionOne c_PIFire 0.5 1 Ub_Fire
+AnimationStateMachine.addTransitionOne c_PIAltFire 0.5 1 Ub_AltFire
+AnimationStateMachine.addTransitionOne c_PIYaw  -1 -0.01 Ub_StrafeLeftThompson
+AnimationStateMachine.returnToState Ub_StandAimThompson 
+AnimationStateMachine.setMorphFactor 0.5
+include copyToallWeapons.inc Thompson
+
+AnimationStateMachine.createState Ub_StrafeRightThompson
+AnimationStateMachine.addAnimation Animations/StandWalkRun/3p/Thompson/3PRunUpperThompson.baf 1.6 1
+AnimationStateMachine.addAnimation Animations/StandWalkRun/1p/Thompson/1pRunThompson.baf 0.7 1
+AnimationStateMachine.addTransitionOne c_PIFire 0.5 1 Ub_Fire
+AnimationStateMachine.addTransitionOne c_PIAltFire 0.5 1 Ub_AltFire
+AnimationStateMachine.addTransitionOne c_PIYaw  0.01 1 Ub_StrafeRightThompson
+AnimationStateMachine.returnToState Ub_StandAimThompson 
+AnimationStateMachine.setMorphFactor 0.5
+include copyToallWeapons.inc Thompson
+
+
+
+rem *** Animations to make the sprint in the Allies Grenade move.
+
+AnimationStateMachine.setActiveState Ub_StandGrenadeAllies
+AnimationStateMachine.setOtherState c_AsmWeaponState WeaponGrenadeAlliesStand
+
+AnimationStateMachine.setActiveState Ub_StandAimGrenadeAllies
+AnimationStateMachine.setOtherState c_AsmWeaponState WeaponGrenadeAlliesStand
+
+AnimationStateMachine.setActiveState Ub_StrafeRightGrenadeAllies
+AnimationStateMachine.setOtherState c_AsmWeaponState WeaponGrenadeAlliesRun
+
+AnimationStateMachine.setActiveState Ub_StrafeLeftGrenadeAllies
+AnimationStateMachine.setOtherState c_AsmWeaponState WeaponGrenadeAlliesRun
+
+AnimationStateMachine.setActiveState Ub_RunForwardGrenadeAllies
+AnimationStateMachine.setOtherState c_AsmWeaponState WeaponGrenadeAlliesRun
+
+AnimationStateMachine.setActiveState Ub_RunBackwardGrenadeAllies
+AnimationStateMachine.setOtherState c_AsmWeaponState WeaponGrenadeAlliesRun
+
+AnimationStateMachine.setActiveState Ub_WalkForwardGrenadeAllies
+AnimationStateMachine.setOtherState c_AsmWeaponState WeaponGrenadeAlliesWalk
+
+AnimationStateMachine.setActiveState Ub_WalkBackwardGrenadeAllies
+AnimationStateMachine.setOtherState c_AsmWeaponState WeaponGrenadeAlliesWalk
+
+
+AnimationStateMachine.createState WeaponGrenadeAlliesRun
+AnimationStateMachine.addAnimation Animations/Weapons/GrenadeAllies/GrenadeAlliesRun.baf 1.45 c_AsmPlayLooping
+
+AnimationStateMachine.createState WeaponGrenadeAlliesWalk
+AnimationStateMachine.addAnimation Animations/Weapons/GrenadeAllies/GrenadeAlliesRun.baf 1.0 c_AsmPlayLooping
+
+AnimationStateMachine.createState WeaponGrenadeAlliesStand
+AnimationStateMachine.addAnimation Animations/Weapons/GrenadeAllies/GrenadeAlliesStand.baf 0.4 c_AsmPlayLooping

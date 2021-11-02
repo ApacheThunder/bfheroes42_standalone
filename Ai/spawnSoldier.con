@@ -1,0 +1,19 @@
+rem --> Args: Kit, Position, Side, Name <--
+
+Var v_kit
+Var v_position
+Var v_rotation
+Var v_personality
+Var v_side
+Var v_name
+
+echo v_arg1 -> v_kit
+echo v_arg2 -> v_position
+echo v_arg3 -> v_rotation
+echo v_arg4 -> v_personality
+echo v_arg5 -> v_side
+echo v_arg6 -> v_name
+
+rem *** Create Bot and attach to  ***
+game.createAIPlayer v_name v_side v_kit v_position
+ai.addBot v_name v_side default v_personality NoEquipment

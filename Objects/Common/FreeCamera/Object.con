@@ -1,0 +1,12 @@
+rem
+rem *** Default MultiPlayerCamera  ***
+rem
+ObjectTemplate.create FreeCamera MultiPlayerFreeCamera
+ObjectTemplate.networkableInfo FreeCameraInfo
+ObjectTemplate.name MultiPlayerFreeCamera
+
+rem
+rem *** Default Camera ***
+rem
+ObjectTemplate.create FreeCamera defaultCamera
+

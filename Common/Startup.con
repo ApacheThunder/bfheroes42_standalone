@@ -1,0 +1,4 @@
+renderer.playBink Movies/EA.bik 0
+renderer.playBink Movies/bfhlogo.bik 0
+renderer.playBink Movies/Intro.bik 0
+renderer.playBink Movies/MenuStartup.bik 0

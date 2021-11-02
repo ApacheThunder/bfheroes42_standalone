@@ -1,0 +1,12 @@
+
+#templateLevel HIGH
+
+	#include MenuRadioSoundHigh.ssc
+	
+#templateLevel MEDIUM
+
+	#include MenuRadioSoundLow.ssc
+	
+#templateLevel LOW
+
+	#include MenuRadioSoundLow.ssc

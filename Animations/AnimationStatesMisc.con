@@ -1,0 +1,19 @@
+rem *** Flags ***
+
+AnimationStateMachine.createState FlagBlow
+AnimationStateMachine.addAnimation animations/Flag/FlagBlow.baf 0.8 c_AsmLooping
+AnimationStateMachine.setMorphFactor 3.0
+AnimationStateMachine.setUserRandomStartTime true
+AnimationStateMachine.addIdle FlagIdle1
+AnimationStateMachine.addIdle FlagIdle2
+
+AnimationStateMachine.createState FlagIdle1
+AnimationStateMachine.addAnimation animations/Flag/FlagIdle1.baf 0.8 c_AsmPlayOnce
+AnimationStateMachine.setMorphFactor 3.0
+AnimationStateMachine.addTransitionWhenDone FlagBlow
+
+AnimationStateMachine.createState FlagIdle2
+AnimationStateMachine.addAnimation animations/Flag/FlagIdle2.baf 0.8 c_AsmPlayOnce
+AnimationStateMachine.setMorphFactor 3.0
+AnimationStateMachine.addTransitionWhenDone FlagBlow
+

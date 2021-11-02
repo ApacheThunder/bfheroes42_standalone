@@ -1,0 +1,10 @@
+rem 
+rem *** FreeCameraInfo ***
+rem 
+NetworkableInfo.createNewInfo FreeCameraInfo
+NetworkableInfo.setIsControlledBy 0
+NetworkableInfo.setHasOrientation 1
+NetworkableInfo.setPredictionMode PMNone
+NetworkableInfo.setBasePriority 0
+
+

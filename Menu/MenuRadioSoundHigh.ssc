@@ -1,0 +1,169 @@
+###################################
+### RogerThat			###
+###################################
+newPatch
+load @ROOT/Sound/@RTD/@Language/RogerThat.wav
+priority 11
+
+###################################
+### Negative			###
+###################################
+newPatch
+load @ROOT/Sound/@RTD/@Language/Negative.wav
+priority 11
+
+###################################
+### GoForTheEnemyFlag		###
+###################################
+newPatch
+load @ROOT/Sound/@RTD/@Language/GoForTheEnemyFlag.wav
+priority 11
+
+###################################
+### ProtectOurFlag		###
+###################################
+newPatch
+load @ROOT/Sound/@RTD/@Language/ProtectOurFlag.wav
+priority 11
+
+###################################
+### ProtectTheFlagCarrier	###
+###################################
+newPatch
+load @ROOT/Sound/@RTD/@Language/ProtectTheFlagCarrier.wav
+priority 11
+
+###################################
+### GetOurFlagBack		###
+###################################
+newPatch
+load @ROOT/Sound/@RTD/@Language/GetOurFlagBack.wav
+priority 11
+
+###################################
+### Pickup			###
+###################################
+newPatch
+load @ROOT/Sound/@RTD/@Language/Pickup.wav
+priority 11
+
+###################################
+### Reinforcements		###
+###################################
+newPatch
+load @ROOT/Sound/@RTD/@Language/Reinforcements.wav
+priority 11
+
+###################################
+### ATSupport			###
+###################################
+newPatch
+load @ROOT/Sound/@RTD/@Language/ATSupport.wav
+priority 11
+
+###################################
+### NavalSupport		###
+###################################
+newPatch
+load @ROOT/Sound/@RTD/@Language/NavalSupport.wav
+priority 11
+
+###################################
+### AirSupport			###
+###################################
+newPatch
+load @ROOT/Sound/@RTD/@Language/AirSupport.wav
+priority 11
+
+###################################
+### ArtilleryReadyForBarrage	###
+###################################
+newPatch
+load @ROOT/Sound/@RTD/@Language/ArtilleryReadyBarrage.wav
+priority 11
+
+###################################
+### ArtilleryBarrageNeeded	###
+###################################
+newPatch
+load @ROOT/Sound/@RTD/@Language/ArtilleryBarrageNeeded.wav
+load @ROOT/Sound/@RTD/@Language/ArtilleryBarrageNeeded2.wav
+
+randomPlay 1
+priority 11
+
+###################################
+### APCSupport			###
+###################################
+newPatch
+load @ROOT/Sound/@RTD/@Language/APCSupport.wav
+priority 11
+
+###################################
+### Armor			###
+###################################
+newPatch
+load @ROOT/Sound/@RTD/@Language/Armor.wav
+priority 11
+
+###################################
+### Infantry			###
+###################################
+newPatch
+load @ROOT/Sound/@RTD/@Language/Infantry.wav
+priority 11
+
+###################################
+### Unit			###
+###################################
+newPatch
+load @ROOT/Sound/@RTD/@Language/Unit.wav
+priority 11
+
+###################################
+### Ships			###
+###################################
+newPatch
+load @ROOT/Sound/@RTD/@Language/Ships.wav
+priority 11
+
+###################################
+### Submarine			###
+###################################
+newPatch
+load @ROOT/Sound/@RTD/@Language/Submarine.wav
+priority 11
+
+###################################
+### Airplanes			###
+###################################
+newPatch
+load @ROOT/Sound/@RTD/@Language/Airplanes.wav
+priority 11
+
+###################################
+### Scout			###
+###################################
+newPatch
+load @ROOT/Sound/@RTD/@Language/Scout.wav
+priority 11
+
+###################################
+### Attack			###
+###################################
+newPatch
+load @ROOT/Sound/@RTD/@Language/Attack.wav
+load @ROOT/Sound/@RTD/@Language/AttackALT.wav
+
+randomPlay 1
+priority 11
+
+###################################
+### Defend			###
+###################################
+newPatch
+load @ROOT/Sound/@RTD/@Language/Defend.wav
+load @ROOT/Sound/@RTD/@Language/DefendALT.wav
+
+randomPlay 1
+priority 11

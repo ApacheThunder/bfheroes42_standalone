@@ -1,0 +1,38 @@
+rem ***************************
+rem *** Fire Weapon NonLooping
+rem ***************************
+
+AnimationStateMachine.createState WeaponFireGrenadeAxis
+AnimationStateMachine.addAnimation Animations/Weapons/GrenadeAxis/GrenadeAxisFire.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone StopDummyState
+AnimationStateMachine.setMorphFactor 10000.0
+AnimationStateMachine.copyState2 GrenadeAllies GrenadeAxis
+
+AnimationStateMachine.createState WeaponFireDetonator
+AnimationStateMachine.addAnimation Animations/Weapons/Detonator/DetonatorFire.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.addTransitionWhenDone StopDummyState
+AnimationStateMachine.setMorphFactor 10000.0
+include singleShotWeapons.inc Detonator
+
+AnimationStateMachine.copyState2 Colt Detonator
+AnimationStateMachine.copyState2 WalterP38 Detonator
+AnimationStateMachine.copyState2 Bazooka Detonator
+
+rem ***************************
+rem *** Fire Weapon Looping
+rem ***************************
+AnimationStateMachine.createState WeaponFireThompson
+AnimationStateMachine.addAnimation Animations/Weapons/Thompson/ThompsonFire.baf 1.0 c_AsmLooping
+AnimationStateMachine.addTransitionWhenDone StopDummyState
+AnimationStateMachine.setMorphFactor 10000.0
+
+AnimationStateMachine.copyState2 SG44 Thompson
+
+rem ***************************
+rem *** Weapon is out of ammo 
+rem ***************************
+AnimationStateMachine.createState WeaponOutOfAmmoThompson
+AnimationStateMachine.addAnimation Animations/Weapons/Thompson/ThompsonOutOfAmmo.baf 1.0 c_AsmPlayOnce
+AnimationStateMachine.setMorphFactor 10000.0
+include copyToallWeapons.inc
+
