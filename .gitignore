@@ -1,5 +1,7 @@
+cache/*
+ShadowWork/*
+Screenshots/*
 *.rfa
-cache/block.dat
 *.jpeg
 *.jpg
 LoadingProfile.txt
