@@ -1,0 +1,6 @@
+console.useRelativePaths 0
+
+run Common/BotNames/RoyalNames
+run Common/BotNames/NationalNames
+
+console.useRelativePaths 1

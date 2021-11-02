@@ -1,0 +1,8 @@
+[CubeMap]
+PositiveX = Levels\Fortress_Frenzy\Envmap\env_01.dds
+NegativeX = Levels\Fortress_Frenzy\Envmap\env_02.dds
+PositiveY = Levels\Fortress_Frenzy\Envmap\env_03.dds
+NegativeY = Levels\Fortress_Frenzy\Envmap\env_04.dds
+PositiveZ = Levels\Fortress_Frenzy\Envmap\env_05.dds
+NegativeZ = Levels\Fortress_Frenzy\Envmap\env_06.dds
+
