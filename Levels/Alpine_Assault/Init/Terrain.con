@@ -1,0 +1,30 @@
+GeometryTemplate.create patchTerrain patchGeometry
+GeometryTemplate.file Levels\Alpine_Assault\HeightMap
+GeometryTemplate.materialMap Levels\Alpine_Assault\MaterialMap
+GeometryTemplate.materialSize 512
+GeometryTemplate.targetTriCount 8192
+GeometryTemplate.worldSize 1024
+GeometryTemplate.yScale 0.273438
+GeometryTemplate.texBaseName Levels\Alpine_Assault\Textures\Tx
+GeometryTemplate.texOffsetX 0
+GeometryTemplate.texOffsetY 0
+GeometryTemplate.detailTexName Levels\Alpine_Assault\Textures\terrainAmbient
+GeometryTemplate.waterLevel 29.7
+GeometryTemplate.seaFloorLevel 0
+GeometryTemplate.lodDistance 512
+
+ObjectTemplate.create SimpleObject terrainObject
+ObjectTemplate.geometry patchGeometry
+ObjectTemplate.createNotInGrid 1
+
+Object.create terrainObject
+Object.setName track
+
+
+Console.worldSize 1024
+
+Terrain.ShadowAmbient 110/140/171
+Terrain.ShadowBorderFadeTime 0.075
+Terrain.ShadowSamplingCullY 8
+
+shadow.shadowColor 0.430/0.547/0.668

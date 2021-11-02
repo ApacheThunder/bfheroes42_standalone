@@ -1,0 +1,8 @@
+[CubeMap]
+PositiveX = Levels\Buccaneer_Bay\Envmap\env_02.dds
+NegativeX = Levels\Buccaneer_Bay\Envmap\env_04.dds
+PositiveY = Levels\Buccaneer_Bay\Envmap\env_05.dds
+NegativeY = Levels\Buccaneer_Bay\Envmap\env_06.dds
+PositiveZ = Levels\Buccaneer_Bay\Envmap\env_01.dds
+NegativeZ = Levels\Buccaneer_Bay\Envmap\env_03.dds
+

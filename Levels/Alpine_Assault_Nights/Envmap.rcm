@@ -1,0 +1,8 @@
+[CubeMap]
+PositiveX = Levels\Alpine_Assault_Nights\Envmap\env_01.dds
+NegativeX = Levels\Alpine_Assault_Nights\Envmap\env_02.dds
+PositiveY = Levels\Alpine_Assault_Nights\Envmap\env_03.dds
+NegativeY = Levels\Alpine_Assault_Nights\Envmap\env_04.dds
+PositiveZ = Levels\Alpine_Assault_Nights\Envmap\env_05.dds
+NegativeZ = Levels\Alpine_Assault_Nights\Envmap\env_06.dds
+

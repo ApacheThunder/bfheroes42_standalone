@@ -1,0 +1,8 @@
+[CubeMap]
+PositiveX = Levels/Belfry_Square/Envmap/env_LF.dds
+NegativeX = Levels/Belfry_Square/Envmap/env_RT.dds
+PositiveY = Levels/Belfry_Square/Envmap/env_UP.dds
+NegativeY = Levels/Belfry_Square/Envmap/env_DN.dds
+PositiveZ = Levels/Belfry_Square/Envmap/env_FR.dds
+NegativeZ = Levels/Belfry_Square/Envmap/env_BK.dds
+
