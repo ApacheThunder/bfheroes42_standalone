@@ -1,0 +1,11 @@
+#templateLevel HIGH
+
+	#include High/AAPitch.ssc
+	
+#templateLevel MEDIUM
+
+	#include Mid/AAPitch.ssc
+	
+#templateLevel LOW
+
+	#include Low/AAPitch.ssc

@@ -1,0 +1,425 @@
+#include ../../Common/Sounds/SoundMap.ssc
+
+newPatch
+####################
+### Small impact ###
+####################
+load @ROOT/Sound/@RTD/collmtl5.wav
+minDistance 10
+randomStartPitch 0.3 / 0.1
+volume .6
+stop FinishSample
+priority -1
+*** Distance Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Distance
+	envelope Ramp
+	param 10
+	param 10
+	param 1
+	param -1	
+endEffect
+
+*** Speed Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Extern #map<Effect::Speed>
+	envelope Ramp
+	param 1
+	param 10
+	param 0
+	param 1
+	param 2
+	param 2
+endEffect
+
+*** Angle Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Extern #map<Effect::Angle>
+	envelope Ramp
+	param 0.3
+	param 1
+	param 0
+	param 1
+endEffect
+
+load @ROOT/Sound/@RTD/collmtl6.wav
+minDistance 10
+randomStartPitch 0.3 / 0.1
+volume .6
+stop FinishSample
+priority -1
+*** Distance Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Distance
+	envelope Ramp
+	param 10
+	param 10
+	param 1
+	param -1	
+endEffect
+
+*** Speed Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Extern #map<Effect::Speed>
+	envelope Ramp
+	param 1
+	param 10
+	param 0
+	param 1
+	param 2
+	param 2
+endEffect
+
+*** Angle Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Extern #map<Effect::Angle>
+	envelope Ramp
+	param 0.3
+	param 1
+	param 0
+	param 1
+endEffect
+
+load @ROOT/Sound/@RTD/collmtl7.wav
+minDistance 10
+randomStartPitch 0.3 / 0.1
+volume .6
+stop FinishSample
+priority -1
+*** Distance Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Distance
+	envelope Ramp
+	param 10
+	param 10
+	param 1
+	param -1	
+endEffect
+
+*** Speed Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Extern #map<Effect::Speed>
+	envelope Ramp
+	param 1
+	param 10
+	param 0
+	param 1
+	param 2
+	param 2
+endEffect
+
+*** Angle Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Extern #map<Effect::Angle>
+	envelope Ramp
+	param 0.3
+	param 1
+	param 0
+	param 1
+endEffect
+
+load @ROOT/Sound/@RTD/collmtl8.wav
+minDistance 10
+randomStartPitch 0.3 / 0.1
+volume .6
+stop FinishSample
+priority -1
+*** Distance Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Distance
+	envelope Ramp
+	param 10
+	param 10
+	param 1
+	param -1	
+endEffect
+
+*** Speed Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Extern #map<Effect::Speed>
+	envelope Ramp
+	param 1
+	param 10
+	param 0
+	param 1
+	param 2
+	param 2
+endEffect
+
+*** Angle Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Extern #map<Effect::Angle>
+	envelope Ramp
+	param 0.3
+	param 1
+	param 0
+	param 1
+endEffect
+
+load @ROOT/Sound/@RTD/collmtl9.wav
+minDistance 10
+randomStartPitch 0.3 / 0.1
+volume .6
+stop FinishSample
+priority -1
+*** Distance Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Distance
+	envelope Ramp
+	param 10
+	param 10
+	param 1
+	param -1	
+endEffect
+
+*** Speed Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Extern #map<Effect::Speed>
+	envelope Ramp
+	param 1
+	param 10
+	param 0
+	param 1
+	param 2
+	param 2
+endEffect
+
+*** Angle Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Extern #map<Effect::Angle>
+	envelope Ramp
+	param 0.3
+	param 1
+	param 0
+	param 1
+endEffect
+
+####################
+### Small impact ###
+####################
+load @ROOT/Sound/@RTD/collwood1.wav
+minDistance 10
+randomStartPitch 0.3 / 0.1
+volume .6
+stop FinishSample
+priority -1
+*** Distance Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Distance
+	envelope Ramp
+	param 10
+	param 10
+	param 1
+	param -1	
+endEffect
+
+*** Speed Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Extern #map<Effect::Speed>
+	envelope Ramp
+	param 1
+	param 10
+	param 0
+	param 1
+	param 2
+	param 2
+endEffect
+
+*** Angle Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Extern #map<Effect::Angle>
+	envelope Ramp
+	param 0.3
+	param 1
+	param 0
+	param 1
+endEffect
+
+load @ROOT/Sound/@RTD/collwood2.wav
+minDistance 10
+randomStartPitch 0.3 / 0.1
+volume .6
+stop FinishSample
+priority -1
+*** Distance Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Distance
+	envelope Ramp
+	param 10
+	param 10
+	param 1
+	param -1	
+endEffect
+
+*** Speed Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Extern #map<Effect::Speed>
+	envelope Ramp
+	param 1
+	param 10
+	param 0
+	param 1
+	param 2
+	param 2
+endEffect
+
+*** Angle Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Extern #map<Effect::Angle>
+	envelope Ramp
+	param 0.3
+	param 1
+	param 0
+	param 1
+endEffect
+
+load @ROOT/Sound/@RTD/collwood3.wav
+minDistance 10
+randomStartPitch 0.3 / 0.1
+volume .6
+stop FinishSample
+priority -1
+*** Distance Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Distance
+	envelope Ramp
+	param 10
+	param 10
+	param 1
+	param -1	
+endEffect
+
+*** Speed Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Extern #map<Effect::Speed>
+	envelope Ramp
+	param 1
+	param 10
+	param 0
+	param 1
+	param 2
+	param 2
+endEffect
+
+*** Angle Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Extern #map<Effect::Angle>
+	envelope Ramp
+	param 0.3
+	param 1
+	param 0
+	param 1
+endEffect
+
+#################
+### RANDOMIZE ###
+#################
+randomPlay 1
+
+newPatch
+############
+### Side ###
+############
+
+load @ROOT/Sound/@RTD/collside1.wav
+minDistance 7
+randomStartPitch 0.2 / 0.1
+volume 1
+stop FinishSample
+dopplerOff
+priority -1
+*** Distance Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Distance
+	envelope Ramp
+	param 10
+	param 15
+	param 1
+	param -1	
+endEffect
+
+
+load @ROOT/Sound/@RTD/collside2.wav
+minDistance 7
+randomStartPitch 0.2 / 0.1
+volume 1
+stop FinishSample
+priority -1
+*** Distance Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Distance
+	envelope Ramp
+	param 10
+	param 15
+	param 1
+	param -1	
+endEffect
+
+load @ROOT/Sound/@RTD/collside3.wav
+minDistance 7
+randomStartPitch 0.2 / 0.1
+volume 1
+stop FinishSample
+dopplerOff
+priority -1
+*** Distance Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Distance
+	envelope Ramp
+	param 10
+	param 15
+	param 1
+	param -1	
+endEffect
+
+
+load @ROOT/Sound/@RTD/collside4.wav
+minDistance 7
+randomStartPitch 0.2 / 0.1
+volume 1
+stop FinishSample
+dopplerOff
+priority -1
+*** Distance Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Distance
+	envelope Ramp
+	param 10
+	param 15
+	param 1
+	param -1	
+endEffect
+
+
+#################
+### RANDOMIZE ###
+#################
+randomPlay 1

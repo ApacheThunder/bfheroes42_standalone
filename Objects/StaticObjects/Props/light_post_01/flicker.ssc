@@ -1,0 +1,18 @@
+newPatch
+load @ROOT/Sound/@RTD/West_SFX_LightFlicker.wav
+loop
+minDistance 6
+priority 1
+volume 0.5
+dopplerOff
+
+beginEffect
+	controlDestination Volume
+	controlSource Distance
+	envelope Ramp
+	param 6
+	param 9
+	param 1
+	param -1	
+endEffect
+

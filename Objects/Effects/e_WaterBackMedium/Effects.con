@@ -1,0 +1,50 @@
+
+
+rem *** e_WaterBackMedium ***
+ObjectTemplate.create EffectBundle e_WaterBackMedium
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.timeToLive CRD_NONE/-1/0/0
+rem -------------------------------------
+ObjectTemplate.addTemplate Em_WaterBackMediumStreak
+ObjectTemplate.setRotation 90/0/0
+ObjectTemplate.setPosition 0/0/3.0
+ObjectTemplate.addTemplate Em_WaterBackSmallFoam
+ObjectTemplate.setPosition 0/-0.499/-7.0
+rem ObjectTemplate.setPosition -1/-0.499/-7.0
+rem ObjectTemplate.addTemplate Em_WaterBackSmallFoam
+rem ObjectTemplate.setPosition 1/-0.499/-7.0
+rem -------------------------------------
+ObjectTemplate.minDistanceUnderwaterSurface 0
+ObjectTemplate.maxDistanceUnderwaterSurface 2
+
+
+rem *** Em_WaterBackMediumStreak ***
+ObjectTemplate.create Emitter Em_WaterBackMediumStreak
+ObjectTemplate.template Fx_WaterBackMediumStreak
+ObjectTemplate.looping 1
+ObjectTemplate.startAtCreation 1
+ObjectTemplate.addEmitterSpeed 1
+ObjectTemplate.emitterSpeedScale 0.5
+ObjectTemplate.lodDistance 800
+ObjectTemplate.timeToLive CRD_NONE/0.1/0/0
+ObjectTemplate.intensity CRD_UNIFORM/10/14/0
+ObjectTemplate.IntensityAtSpeed 15
+ObjectTemplate.relativePositionInDof CRD_NONE/0.1/0/0
+ObjectTemplate.relativePositionInUp CRD_NONE/-2/0/0
+ObjectTemplate.relativePositionInRight CRD_UNIFORM/0/-10/0
+ObjectTemplate.positionalSpeedInRight CRD_NONE/2/0/0
+ObjectTemplate.startRotation CRD_NONE/1/0/0
+ObjectTemplate.moveToWaterSurface 1
+
+
+rem *** Fx_WaterBackMediumStreak ***
+ObjectTemplate.create Particle Fx_WaterBackMediumStreak
+ObjectTemplate.geometry watermesh_streak_m1
+ObjectTemplate.timeToLive CRD_NONE/3/1/0
+ObjectTemplate.size CRD_NONE/8.5/11.5/0
+ObjectTemplate.gravityModifier CRD_NONE/0/0/0
+ObjectTemplate.sizeModifier 10/3/3
+ObjectTemplate.sizeOverTime 0/0.100024|100/1
+ObjectTemplate.gravityModifierOverTime 0/0.5|86/0.530015|100/1
+ObjectTemplate.alphaOverTime 0/6.1e-005|9/0.53|100/0
+

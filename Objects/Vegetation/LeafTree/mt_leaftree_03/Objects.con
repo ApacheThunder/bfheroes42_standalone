@@ -1,0 +1,30 @@
+ObjectTemplate.create SimpleObject mt_leaftree_03
+ObjectTemplate.geometry mt_leaftree_03_m1
+ObjectTemplate.hasCollisionPhysics 1
+
+ObjectTemplate.create Bundle mt_leaftree_03_test
+ObjectTemplate.hasCollisionPhysics 1
+rem ---------------------------------------
+ObjectTemplate.addTemplate lodLeafTree03
+rem ---------------------------------------
+ObjectTemplate.addToCollisionGroup c_CGStaticObjects
+
+ObjectTemplate.create lodObject lodLeafTree03
+rem -----------------------------------------
+ObjectTemplate.addTemplate leafTree03Complex
+ObjectTemplate.addTemplate leafTree03Simple
+rem -----------------------------------------
+ObjectTemplate.lodSelector TreeSelector
+
+ObjectTemplate.create SimpleObject leafTree03Complex
+rem ObjectTemplate.geometry mt_leaftree_03_trunk_m1
+ObjectTemplate.geometry mt_leaftree_03_test_m1
+ObjectTemplate.hasCollisionPhysics 1
+rem ObjectTemplate.addToCollisionGroup c_CGStaticObjects
+
+ObjectTemplate.create SimpleObject leafTree03Simple
+ObjectTemplate.geometry mt_leaftree_03_m1
+
+LodSelectorTemplate.create DistanceSelector TreeSelector
+LodSelectorTemplate.addLodDistance 200
+

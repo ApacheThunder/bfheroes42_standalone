@@ -1,0 +1,122 @@
+newPatch
+######################
+### Close Distance ###
+######################
+
+load @ROOT/Sound/@RTD/uwexpl1.wav
+minDistance 200
+dopplerOff
+priority 2
+
+*** Distance Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Distance
+	envelope Ramp
+	param 200
+	param 400
+	param 1
+	param -1
+endEffect
+
+######################
+### Close Distance ###
+######################
+
+load @ROOT/Sound/@RTD/uwexpl2.wav
+minDistance 200
+dopplerOff
+priority 2
+
+*** Distance Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Distance
+	envelope Ramp
+	param 200
+	param 400
+	param 1
+	param -1
+endEffect
+
+######################
+### Close Distance ###
+######################
+
+load @ROOT/Sound/@RTD/uwexpl3.wav
+minDistance 200
+dopplerOff
+priority 2
+
+*** Distance Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Distance
+	envelope Ramp
+	param 200
+	param 400
+	param 1
+	param -1
+endEffect
+
+######################
+### Close Distance ###
+######################
+
+load @ROOT/Sound/@RTD/uwexpl4.wav
+minDistance 200
+dopplerOff
+priority 2
+
+*** Distance Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Distance
+	envelope Ramp
+	param 200
+	param 400
+	param 1
+	param -1
+endEffect
+
+######################
+### Close Distance ###
+######################
+
+load @ROOT/Sound/@RTD/uwexpl5.wav
+minDistance 200
+dopplerOff
+priority 2
+
+*** Distance Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Distance
+	envelope Ramp
+	param 200
+	param 400
+	param 1
+	param -1
+endEffect
+
+######################
+### Close Distance ###
+######################
+
+load @ROOT/Sound/@RTD/uwexpl6.wav
+minDistance 200
+dopplerOff
+priority 2
+
+*** Distance Volume ***
+beginEffect
+	controlDestination Volume
+	controlSource Distance
+	envelope Ramp
+	param 200
+	param 400
+	param 1
+	param -1
+endEffect
+
+randomPlay 1

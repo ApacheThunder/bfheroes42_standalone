@@ -1,0 +1,3 @@
+LodSelectorTemplate.create DistCompareSelector2 HandWeaponLodSelector
+LodSelectorTemplate.addLodComparison 0.0
+LodSelectorTemplate.addLodDistance 6.0

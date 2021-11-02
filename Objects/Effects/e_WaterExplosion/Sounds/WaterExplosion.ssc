@@ -1,0 +1,11 @@
+#templateLevel HIGH
+
+	#include WaterExplosion_High.ssc
+	
+#templateLevel MEDIUM
+
+	#include WaterExplosion_MedLow.ssc
+	
+#templateLevel LOW
+
+	#include WaterExplosion_MedLow.ssc

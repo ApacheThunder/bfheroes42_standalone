@@ -1,0 +1,8 @@
+GeometryTemplate.create StandardMesh mt_leaftree_03_m1
+GeometryTemplate.file mt_leaftree_03_m1
+
+GeometryTemplate.create StandardMesh mt_leaftree_03_trunk_m1
+GeometryTemplate.file mt_leaftree_03_trunk_m1
+
+GeometryTemplate.create TreeMesh mt_leaftree_03_test_m1
+GeometryTemplate.file mt_leaftree_03_m1

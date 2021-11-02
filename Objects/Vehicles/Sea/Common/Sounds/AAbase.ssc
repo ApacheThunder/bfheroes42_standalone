@@ -1,0 +1,11 @@
+#templateLevel HIGH
+
+	#include High/AAbase.ssc
+	
+#templateLevel MEDIUM
+
+	#include Mid/AAbase.ssc
+	
+#templateLevel LOW
+
+	#include Low/AAbase.ssc

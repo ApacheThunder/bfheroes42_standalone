@@ -1,0 +1,10 @@
+
+
+rem *** e_watertouchGuy ***
+ObjectTemplate.create EffectBundle e_watertouchGuy
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.loadSoundScript Sounds/swimidle.ssc
+rem -------------------------------------
+ObjectTemplate.addTemplate Em_silent
+ObjectTemplate.timeToLive CRD_NONE/1.8/0/0
+rem -------------------------------------

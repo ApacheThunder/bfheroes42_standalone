@@ -1,0 +1,102 @@
+
+
+rem *** e_ExplArmor ***
+ObjectTemplate.create EffectBundle e_ExplArmor
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.lodDistance 900
+ObjectTemplate.loadSoundScript Sounds/e_ExplArmor.ssc
+rem -------------------------------------
+ObjectTemplate.addTemplate Em_ExplArmor_flash
+ObjectTemplate.addTemplate Em_ExplArmor_flash1
+ObjectTemplate.addTemplate Em_ExplArmor_Cloud
+ObjectTemplate.addTemplate Em_ExplArmor_Smoke
+ObjectTemplate.addTemplate Em_GibbSmokeSmoke
+ObjectTemplate.timeToLive CRD_NONE/1.8/0/0
+rem -------------------------------------
+
+rem *** Em_ExplArmor_flash ***
+ObjectTemplate.create Emitter Em_ExplArmor_flash
+ObjectTemplate.template Fx_ExplArmor_flash
+ObjectTemplate.timeToLive CRD_NONE/0.1/0/0
+ObjectTemplate.intensity CRD_UNIFORM/11/20/0
+ObjectTemplate.relativePositionInUp CRD_UNIFORM/0/1/0
+ObjectTemplate.startRotation CRD_UNIFORM/1/180/0
+rem *** Fx_ExplArmor_flash ***
+ObjectTemplate.create SpriteParticle Fx_ExplArmor_flash
+ObjectTemplate.timeToLive CRD_NONE/0.5/0.4/0
+ObjectTemplate.size CRD_UNIFORM/0.5/1/0
+ObjectTemplate.gravityModifier CRD_NONE/0.1/0/0
+ObjectTemplate.sizeOverTime 0/1|20/2|100/2
+ObjectTemplate.texture e_exp_Dirt9
+ObjectTemplate.initRotation CRD_UNIFORM/1/180/0
+ObjectTemplate.destBlendMode BMOne
+ObjectTemplate.colorRGBAOverTime 0/255/224/159/255|49/255/255/192/200|100/255/255/128/0
+
+
+rem *** Em_ExplArmor_flash1 ***
+ObjectTemplate.create Emitter Em_ExplArmor_flash1
+ObjectTemplate.template Fx_ExplArmor_flash1
+ObjectTemplate.timeToLive CRD_NONE/0.1/0/0
+ObjectTemplate.intensity CRD_UNIFORM/40/0/0
+ObjectTemplate.relativePositionInUp CRD_UNIFORM/0/1/0
+ObjectTemplate.startRotation CRD_NONE/1/0/0
+rem *** Fx_ExplArmor_flash ***
+ObjectTemplate.create SpriteParticle Fx_ExplArmor_flash1
+ObjectTemplate.timeToLive CRD_NONE/0.5/0.4/0
+ObjectTemplate.size CRD_UNIFORM/0.5/1/0
+ObjectTemplate.gravityModifier CRD_NONE/0.1/0/0
+ObjectTemplate.sizeOverTime 0/1|20/2|100/2
+ObjectTemplate.texture e_Fire4
+ObjectTemplate.initRotation CRD_NONE/1/0/0
+ObjectTemplate.destBlendMode BMOne
+ObjectTemplate.colorRGBAOverTime 0/255/224/159/255|49/255/255/192/200|100/255/255/128/0
+
+
+rem *** Em_ExplArmor_Cloud ***
+ObjectTemplate.create Emitter Em_ExplArmor_Cloud
+ObjectTemplate.template Fx_ExplArmor_Cloud
+ObjectTemplate.timeToLive CRD_NONE/0.3/0/0
+ObjectTemplate.intensity CRD_NONE/20/0/0
+ObjectTemplate.startRotation CRD_NONE/1/0/0
+rem *** Fx_ExplArmor_Cloud ***
+ObjectTemplate.create SpriteParticle Fx_ExplArmor_Cloud
+ObjectTemplate.timeToLive CRD_NONE/1/0/0
+ObjectTemplate.size CRD_UNIFORM/2/1.5/0
+ObjectTemplate.gravityModifier CRD_UNIFORM/-0.01/0.02/0
+ObjectTemplate.sizeOverTime 0/0|28/1.34999|100/3.14997
+ObjectTemplate.texture e_smoke5
+ObjectTemplate.initRotation CRD_UNIFORM/1/180/1
+ObjectTemplate.destBlendMode BMInvSourceAlpha
+ObjectTemplate.colorRGBAOverTime 0/37/36/24/22|27/139/125/101/91|100/181/167/147/0
+
+
+rem *** Em_ExplArmor_Smoke ***
+ObjectTemplate.create Emitter Em_ExplArmor_Smoke
+ObjectTemplate.template Fx_ExplAni_Smoke
+ObjectTemplate.addEmitterSpeed 1
+ObjectTemplate.emitterSpeedScale 1
+ObjectTemplate.delay CRD_NONE/0.1/0/0
+ObjectTemplate.timeToLive CRD_NONE/0.1/0/0
+ObjectTemplate.intensity CRD_NONE/11/20/0
+ObjectTemplate.relativePositionInDof CRD_NONE/-1.2/0/0
+ObjectTemplate.positionalSpeedInDof CRD_UNIFORM/2/0/0
+ObjectTemplate.positionalSpeedInUp CRD_UNIFORM/2/0/0
+ObjectTemplate.rotationalSpeedInDof CRD_NONE/0/0/0
+ObjectTemplate.rotationalSpeedInUp CRD_NONE/0/0/0
+ObjectTemplate.rotationalSpeedInRight CRD_NONE/0/0/0
+ObjectTemplate.startRotation CRD_UNIFORM/100/0/0
+rem *** Fx_ExplArmor_Smoke ***
+ObjectTemplate.create SpriteParticle Fx_ExplArmor_Smoke
+ObjectTemplate.timeToLive CRD_NONE/1/0/0
+ObjectTemplate.size CRD_UNIFORM/2/2.5/0
+ObjectTemplate.gravityModifier CRD_NONE/-0.2/0/0
+ObjectTemplate.sizeOverTime 0/1|100/2
+ObjectTemplate.texture e_muzs3_I
+ObjectTemplate.initRotation CRD_UNIFORM/1/180/0
+ObjectTemplate.XYSizeRatio CRD_NONE/1.1/0/0
+ObjectTemplate.destBlendMode BMInvSourceAlpha
+ObjectTemplate.rotationSpeed CRD_NONE/0/0/0
+ObjectTemplate.rotationSpeedOverTime 0/2.04004|26/3.36|64/3.84002|100/6
+ObjectTemplate.colorRGBAOverTime 0/214/185/141/102|55/255/255/255/45|100/0/0/0/0
+
+

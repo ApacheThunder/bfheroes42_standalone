@@ -1,0 +1,11 @@
+#templateLevel HIGH
+
+	#include High/AAfire.ssc
+	
+#templateLevel MEDIUM
+
+	#include Mid/AAfire.ssc
+	
+#templateLevel LOW
+
+	#include Low/AAfire.ssc

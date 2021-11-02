@@ -1,0 +1,11 @@
+#templateLevel HIGH
+
+	#include e_WaterImpact_High.ssc
+	
+#templateLevel MEDIUM
+
+	#include e_WaterImpact_MedLow.ssc
+	
+#templateLevel LOW
+
+	#include e_WaterImpact_MedLow.ssc
